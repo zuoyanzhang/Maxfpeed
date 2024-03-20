@@ -77,6 +77,8 @@ $ sudo apt-get install libgmp-dev ligmpfr-dev cmake python3
 $ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple numpy pandas scikit-learn 
 ```
 
+* Note: There may be a need to modify two places in the Maxfpeed/CMakeLists.txt file. Since my python version is python3.8, there are two places that are python3.8. Please note that you need to modify it to your python version, you can use python3 --version to check the version. If it is python3.10, change these two places to python3.10.
+
 #### Instructions
 Maxfpeed is a command-line tool that you can use on Ubuntu.
 ```
