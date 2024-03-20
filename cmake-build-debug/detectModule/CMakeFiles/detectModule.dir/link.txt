@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdetectModule.a CMakeFiles/detectModule.dir/EIFFEL/src/DBSCAN.cpp.o CMakeFiles/detectModule.dir/EIFFEL/src/createInput.cpp.o CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o CMakeFiles/detectModule.dir/HSED/src/common.cpp.o CMakeFiles/detectModule.dir/HSED/src/float.cpp.o CMakeFiles/detectModule.dir/HSED/src/getresult.cpp.o
+/usr/bin/ranlib libdetectModule.a

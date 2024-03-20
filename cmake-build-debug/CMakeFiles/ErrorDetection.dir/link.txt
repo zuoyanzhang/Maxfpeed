@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ErrorDetection.dir/maxFpeedMain/main.cpp.o -o ErrorDetection  detectModule/libdetectModule.a -lm -lmpfr -lpython3.8 
