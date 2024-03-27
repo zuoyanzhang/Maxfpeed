@@ -24,13 +24,22 @@ int main(int argc, char *argv[]) {
     auto originExpr = ParseExpressionFromString(inputStr);
     vector<string> vars;
     getVariablesFromExpr(originExpr, vars);
-
-    if (containOnlySimpleX(inputStr)) {
-        auto funcNameMpfr = geneMpfrCode(inputStr, vars);
-        auto funcNameMpfr2 = geneMultiMpfrCode(inputStr, vars);
-    } else {
-        auto funcNameMpfr = geneMultiMpfrCode(inputStr, vars);
+    string method = "";
+    method = string(argv[2]);
+    if (method == "--HSED") {
+	auto f = geneMpfrCode(inputStr, vars);
+	return 0;
     }
+    if (method == "--EIFFEL") {
+	auto f = geneMultiMpfrCode(inputStr, vars);
+	return 0;
+    }
+    //if (containOnlySimpleX(inputStr)) {
+    //    auto funcNameMpfr = geneMpfrCode(inputStr, vars);
+    //    auto funcNameMpfr2 = geneMultiMpfrCode(inputStr, vars);
+    //} else {
+    //    auto funcNameMpfr = geneMultiMpfrCode(inputStr, vars);
+    //}
 
     return 0;
 }

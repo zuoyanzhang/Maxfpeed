@@ -164,14 +164,14 @@ int geneMpfrCode(const string exprStr, vector<string> vars)
         << "}\n";
 
     ofs << "double getFloatToDoubleOfOrigin(const float &inputx) {\n"
-        << "\tdouble x = (double)inputx;\n";
+        << "\tdouble " << vars[0] << " = (double)inputx;\n";
     for (size_t i = 1; i < vars.size(); ++i) {
         ofs << "\tdouble " << vars[i] << " = " << 0.0 << ";\n";
     }
     ofs << "\treturn " << exprStr << ";\n"
         << "}\n";
     ofs << "double getDoubleOfOrigin(const double &inputx) {\n"
-        << "\tdouble x = inputx;\n";
+        << "\tdouble " << vars[0] << " = inputx;\n";
     for (size_t i = 1; i < vars.size(); ++i) {
         ofs << "\tdouble " << vars[i] << " = " << 0.0 << ";\n";
     }

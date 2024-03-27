@@ -4,7 +4,7 @@ str="${1}"
 left_number=$2
 right_number=$3
 detectMethod="${4}"
-./bin/mpfrCodeGene.exe "${str}"
+./bin/mpfrCodeGene.exe "${str}" "${detectMethod}"
 echo "------------------------------------------------------------"
 echo "| step1: generate high-precision version code successfully |"
 echo "------------------------------------------------------------"
