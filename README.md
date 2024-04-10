@@ -84,7 +84,6 @@ Maxfpeed is a command-line tool that you can use on Ubuntu.
 ```
 $ git clone https://gitee.com/zhangzuoyan/Maxfpeed.git
 $ cd Maxfpeed
-$ mkdir bin
 ```
 You can then execute the run.sh script to perform error detection.
 ```
