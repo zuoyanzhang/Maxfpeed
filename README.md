@@ -73,7 +73,7 @@ MPFR, GMP, python3 (numpy, scikit-learn, pandas), and cmake. You can install the
 ```
 $ sudo apt-get update 
 $ sudo apt-get upgrade
-$ sudo apt-get install libgmp-dev ligmpfr-dev cmake python3
+$ sudo apt-get install libgmp-dev libmpfr-dev cmake python3
 $ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple numpy pandas scikit-learn 
 ```
 
