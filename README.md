@@ -110,7 +110,7 @@ double-precision layer: x = 2.1352211012717968, maximumULP = 3.19, maximumRelati
 -------------------------------------------------------------------------------
 ```
 
-For example, running ./run.sh "(4.0 * x * x) / (1 + (x / 1.11) * (x / 1.11))" 0 100 --EIFFE outputs the following results:
+For example, running ./run.sh "(4.0 * x * x) / (1 + (x / 1.11) * (x / 1.11))" 0 100 --EIFFEL outputs the following results:
 ```
 ------------------------------------------------------------
 | step1: generate high-precision version code successfully |
