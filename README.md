@@ -82,7 +82,7 @@ $ pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple numpy pandas scikit-l
 #### Instructions
 Maxfpeed is a command-line tool that you can use on Ubuntu.
 ```
-$ git clone https://gitee.com/zhangzuoyan/Maxfpeed.git
+$ git clone https://github.com/zuoyanzhang/Maxfpeed.git
 $ cd Maxfpeed
 ```
 You can then execute the run.sh script to perform error detection.
