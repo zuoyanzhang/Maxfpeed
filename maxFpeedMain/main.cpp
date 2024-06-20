@@ -26,6 +26,14 @@ typedef union {
     double d;
 } DL;
 
+/**
+ * @brief Maxfpeed的主函数，选择使用--HSED或--EIFFEL
+ * 
+ * @param argc 等于4是可以选择使用--HSED或--EIFFEL，大于4只能选择--EIFFEL
+ * @param argv 
+ * @return int 
+ */
+
 int main(int argc, char *argv[]) {
     if (argc == 4) {
         if (string(argv[3]) == "--HSED") { // HSED method

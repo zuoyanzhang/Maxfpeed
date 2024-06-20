@@ -372,7 +372,7 @@ vector<vector<double>> DBSCAN2(double Eps, int MinPts) {
     int dataDim = dataset[0].xn.size();//data dimension
     int cluster_sum = 0;
     for (int i = 1; i < len; i++) {
-        sprintf(dispInfo, "第%3d个数据：", i);
+        sprintf(dispInfo, "第%3d个数据: ", i);
         for (int j = 0; j < dataDim; j++) {
             char dataSrc[30];
             if (j == 0)

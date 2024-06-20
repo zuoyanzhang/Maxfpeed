@@ -63,7 +63,17 @@ float stringToFloat(string i);//把字符串转换为浮点数
 vector<point> openFile(const char* dataset);//打开文件
 float squareDistance(point a, point b);//计算距离
 float squareDistanceVect(point a, point b);//多维数据算欧氏距离
+
+/**
+ * @brief Executes the DBSCAN (Density-Based Spatial Clustering of Applications with Noise) algorithm.
+ *
+ * DBSCAN is a density-based clustering algorithm: given a set of points in some space, it groups together points that are packed closely together (points with many nearby neighbors), marking low-density regions as outliers.
+ */
 vector<vector<double>> DBSCAN(double Eps, int MinPts);
+
+/**
+ * @brief 使用的是这个版本
+ */
 vector<vector<double>> DBSCAN2(double Eps, int MinPts);
 
 // #endif

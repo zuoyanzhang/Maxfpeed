@@ -11,6 +11,19 @@ int jiou(int x)
         return 0;
 }
 
+/**
+ * @brief Function to compute the unit in the last place (ULP) for a given double precision floating-point number.
+ *
+ * @param y The double precision floating-point number for which the ULP needs to be computed.
+ * @return The ULP value for the given number.
+ *
+ * This function computes the ULP value for a given double precision floating-point number.
+ * It uses a binary search algorithm to find the closest power of 2 to the given number and then calculates the ULP value.
+ *
+ * The function handles edge cases such as subnormal numbers, infinity, and NaN.
+ *
+ * @note The function assumes that the input number is a valid double precision floating-point number.
+ */
 double computeULP(double y)
 {
     double x = 0, res = 0, powermin = 0, powermax = 0, powermiddle = 0;
@@ -110,6 +123,15 @@ float computeULPf(float y)
     return res;
 }
 
+/**
+ * @brief Function to compute the difference between two double precision floating-point numbers in ULP (Units in the Last Place).
+ *
+ * @param origin The original double precision floating-point number.
+ * @param oracle The oracle double precision floating-point number.
+ * @return The difference between the two numbers in ULP.
+ * @note This function assumes that the MPFR library is properly initialized and configured.
+ * @note The function does not handle any error checking or exception handling.
+ */
 double computeULPDiff(mpfr_t origin, mpfr_t oracle) {
     mpfr_t mp1, mp2, mp3, mp4;
     mpfr_inits2(128, mp1, mp2, mp3, mp4, (mpfr_ptr) 0);

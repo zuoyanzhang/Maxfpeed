@@ -21,7 +21,14 @@ using std::regex;
 //===----------------------------------------------------------------------===//
 // basic operation
 //===----------------------------------------------------------------------===//
-
+/**
+ * @brief check if two abstract syntax tree(AST) expressions are equal
+ * 
+ * @param expr1 the first AST expression
+ * @param expr2 the second AST expression
+ * @return true 
+ * @return false 
+ */
 bool isEqual(const ast_ptr &expr1, const ast_ptr &expr2)
 {
     if(expr1 == nullptr || expr2 == nullptr)
@@ -119,6 +126,14 @@ bool isEqual(const ast_ptr &expr1, const ast_ptr &expr2)
     }
 }
 
+/**
+ * @brief Checks if the given abstract syntax tree (AST) expression represents a fraction.
+ * This function determines if the provided AST expression is a binary operation
+ * with the division operator ('/'). If the expression is a fraction, it returns true.
+ * @param expr The AST expression to check.
+ * @return true 
+ * @return false 
+ */
 bool isFraction(const ast_ptr &expr)
 {
     if (expr == nullptr)
@@ -138,6 +153,16 @@ bool isFraction(const ast_ptr &expr)
     return false;
 }
 
+/**
+ * @brief Checks if the given vector of abstract syntax tree (AST) expressions contains a single constant number.
+ * 
+ * This function determines if the provided vector of AST expressions contains exactly one element,
+ * and if that element is of type "Number".
+ * 
+ * @param exprs A vector of AST expressions to check.
+ * @return true if the vector contains exactly one element and that element is a number.
+ * @return false otherwise.
+ */
 bool isConstant(const vector<ast_ptr> &exprs)
 {
     size_t size = exprs.size();
@@ -153,6 +178,16 @@ bool isConstant(const vector<ast_ptr> &exprs)
     return false;
 }
 
+/**
+ * @brief Extracts the numerator from a binary expression representing a fraction.
+ * 
+ * This function checks if the given abstract syntax tree (AST) expression is a binary operation
+ * with the division operator ('/'). If it is, the function returns the left-hand side (numerator)
+ * of the division. If the expression is not a fraction, it returns a clone of the original expression.
+ * 
+ * @param expr The AST expression to extract the numerator from.
+ * @return ast_ptr The numerator of the fraction if the expression is a fraction, otherwise a clone of the original expression.
+ */
 ast_ptr getNumerator(const ast_ptr &expr)
 {
     if (expr == nullptr)
@@ -173,6 +208,16 @@ ast_ptr getNumerator(const ast_ptr &expr)
     return expr->Clone();
 }
 
+/**
+ * @brief Extracts the denominator from a binary expression representing a fraction.
+ * 
+ * This function checks if the given abstract syntax tree (AST) expression is a binary operation
+ * with the division operator ('/'). If it is, the function returns the right-hand side (denominator)
+ * of the division. If the expression is not a fraction, it returns a clone of the original expression.
+ * 
+ * @param expr The AST expression to extract the denominator from.
+ * @return ast_ptr The denominator of the fraction if the expression is a fraction, otherwise a clone of the original expression.
+ */
 ast_ptr getDenominator(const ast_ptr &expr)
 {
     if (expr == nullptr)
@@ -193,6 +238,19 @@ ast_ptr getDenominator(const ast_ptr &expr)
     return expr->Clone();
 }
 
+/**
+ * @brief Creates a binary expression AST node from two given expressions and an operator.
+ * 
+ * This function takes two abstract syntax tree (AST) expressions and a binary operator,
+ * and creates a new binary expression AST node that represents the operation.
+ * If either of the input expressions is nullptr, it returns a clone of the other expression.
+ * If both input expressions are nullptr, it returns nullptr and logs a warning.
+ * 
+ * @param expr1 The left-hand side expression of the binary operation.
+ * @param expr2 The right-hand side expression of the binary operation.
+ * @param op The binary operator to be applied to the expressions.
+ * @return ast_ptr A pointer to the newly created binary expression AST node.
+ */
 ast_ptr createBinaryExpr(const ast_ptr &expr1, const ast_ptr &expr2, const char op)
 {
     if (expr1 == nullptr && expr2 == nullptr)
@@ -227,7 +285,17 @@ void mineAppend(vector<ast_ptr> &dest, vector<ast_ptr> &origin)
 //===----------------------------------------------------------------------===//
 // print information
 //===----------------------------------------------------------------------===//
-
+/**
+ * @brief Converts an abstract syntax tree (AST) expression to its string representation.
+ * 
+ * This function takes an AST expression and converts it to a string representation
+ * with a specified precision for numerical values. It handles different types of expressions
+ * such as numbers, variables, function calls, and binary operations.
+ * 
+ * @param expr The AST expression to convert to a string.
+ * @param PRECISION The precision to use for numerical values.
+ * @return string The string representation of the AST expression.
+ */
 string PrintExpression(const ast_ptr &expr, const size_t PRECISION)
 {
     if(expr == nullptr)
@@ -314,6 +382,14 @@ string PrintExpression(const ast_ptr &expr, const size_t PRECISION)
     return exprStr;
 }
 
+/**
+ * @brief Prints the details of a given function AST (Abstract Syntax Tree).
+ * 
+ * This function prints the name, arguments, and body of a function represented by the given FunctionAST object.
+ * It outputs the information to the standard error stream.
+ * 
+ * @param fun A unique pointer to the FunctionAST object representing the function to be printed.
+ */
 void PrintFunction(std::unique_ptr<FunctionAST> &fun)
 {
     if(fun == nullptr)
@@ -346,6 +422,18 @@ void PrintFunction(std::unique_ptr<FunctionAST> &fun)
     }
 }
 
+/**
+ * @brief Prints an abstract syntax tree (AST) expression with a specified prefix and precision.
+ * 
+ * This function prints the given AST expression to the standard error stream, 
+ * with a specified prefix and precision for numerical values. If an index is provided, 
+ * it includes the index in the printed output.
+ * 
+ * @param expr The AST expression to print.
+ * @param prefix A string prefix to prepend to the printed expression.
+ * @param PRECISION The precision to use for numerical values in the expression.
+ * @param index The index of the expression. If index is -1, it is not included in the output.
+ */
 void printExpr(const ast_ptr &expr, string prefix, const size_t PRECISION, int index)
 {
     if(index == -1)
@@ -354,6 +442,18 @@ void printExpr(const ast_ptr &expr, string prefix, const size_t PRECISION, int i
         fprintf(stderr, "%sNo.%d: %s\n", prefix.c_str(), index, PrintExpression(expr, PRECISION).c_str());
 }
 
+/**
+ * @brief Prints a list of abstract syntax tree (AST) expressions with a specified prefix and precision.
+ * 
+ * This function iterates through a vector of AST expressions and prints each expression to the standard error stream.
+ * Each expression is prefixed with a specified string and its index in the vector. If the showTree flag is set to true,
+ * it also prints the tree representation of each expression.
+ * 
+ * @param exprs A vector of AST expressions to print.
+ * @param prefix A string prefix to prepend to each printed expression.
+ * @param showTree A boolean flag indicating whether to print the tree representation of each expression.
+ * @param PRECISION The precision to use for numerical values in the expressions.
+ */
 void printExprs(const vector<ast_ptr> &exprs, string prefix, bool showTree, const size_t PRECISION)
 {
     for(size_t i = 0; i < exprs.size(); i++)
@@ -370,6 +470,16 @@ void printExprs(const vector<ast_ptr> &exprs, string prefix, bool showTree, cons
 const char blankChar(' ');
 const string blankStr(2, blankChar);
 
+/**
+ * @brief Updates the given string by appending blank characters if the position is greater than the current rightmost position.
+ * 
+ * This function ensures that the string is extended with blank characters to reach the specified position.
+ * It appends the necessary number of blank characters to the string if the given position is greater than the current rightmost position.
+ * 
+ * @param str The string to be updated.
+ * @param posit The target position to reach in the string.
+ * @param rightest The current rightmost position in the string.
+ */
 void updateStr(string &str, const int posit, const int rightest)
 {
     if(posit > rightest)
@@ -379,6 +489,20 @@ void updateStr(string &str, const int posit, const int rightest)
     }
 }
 
+/**
+ * @brief Recursively prints the abstract syntax tree (AST) expression into a visual tree representation.
+ * 
+ * This function traverses the AST expression and generates a visual representation of the tree structure.
+ * It handles different types of expressions such as numbers, variables, function calls, and binary operations.
+ * The visual representation is stored in the treePics vector, and the rightmost positions of each level are tracked in the rightests vector.
+ * 
+ * @param expr The AST expression to be printed.
+ * @param posit The current position in the visual representation.
+ * @param treePics A vector of strings representing the visual tree structure at each level.
+ * @param rightests A vector of integers representing the rightmost positions at each level.
+ * @param PRECISION The precision to use for numerical values in the expression.
+ * @return int The rightmost position after processing the current expression.
+ */
 int printASTKernel(const ast_ptr &expr, const int posit, vector<string> &treePics, vector<int> &rightests, const size_t PRECISION = DOUBLE_PRECISION)
 {
     if (expr == nullptr)
@@ -492,6 +616,16 @@ int printASTKernel(const ast_ptr &expr, const int posit, vector<string> &treePic
     return rightest;
 }
 
+/**
+ * @brief Prints the abstract syntax tree (AST) expression into a visual tree representation.
+ * 
+ * This function traverses the AST expression and generates a visual representation of the tree structure.
+ * It handles different types of expressions such as numbers, variables, function calls, and binary operations.
+ * The visual representation is printed to the standard output.
+ * 
+ * @param expr The AST expression to be printed.
+ * @param PRECISION The precision to use for numerical values in the expression.
+ */
 void printAST(const ast_ptr &expr, const size_t PRECISION)
 {
     vector<string> treePics;
@@ -503,6 +637,17 @@ void printAST(const ast_ptr &expr, const size_t PRECISION)
     }
 }
 
+/**
+ * @brief Prints the abstract syntax tree (AST) expression into a visual tree representation and stores it in a string.
+ * 
+ * This function traverses the AST expression and generates a visual representation of the tree structure.
+ * It handles different types of expressions such as numbers, variables, function calls, and binary operations.
+ * The visual representation is stored in the provided result string.
+ * 
+ * @param expr The AST expression to be printed.
+ * @param result A string to store the visual representation of the AST.
+ * @param PRECISION The precision to use for numerical values in the expression.
+ */
 void printAST(const ast_ptr &expr, string &result, const size_t PRECISION)
 {
     vector<string> treePics;
@@ -514,6 +659,18 @@ void printAST(const ast_ptr &expr, string &result, const size_t PRECISION)
     }
 }
 
+/**
+ * @brief Retrieves the MPFR parameter number representation of an AST expression.
+ * 
+ * This function traverses an abstract syntax tree (AST) expression and generates a string
+ * representation of the expression suitable for MPFR (Multiple Precision Floating-Point
+ * Reliable) library usage. It handles different types of expressions such as numbers,
+ * variables, function calls, and binary operations.
+ * 
+ * @param expr The AST expression to be converted.
+ * @param mpfr_variables A reference to a size_t variable that keeps track of the number of MPFR variables.
+ * @return string The MPFR parameter number representation of the AST expression.
+ */
 string getMpfrParameterNumber(const ast_ptr &expr, size_t &mpfr_variables) {
     if(expr == nullptr)
     {
@@ -573,6 +730,20 @@ string getMpfrParameterNumber(const ast_ptr &expr, size_t &mpfr_variables) {
     return exprStr;
 }
 
+/**
+ * @brief Generates MPFR (Multiple Precision Floating-Point Reliable) code for a given AST expression.
+ * 
+ * This function traverses an abstract syntax tree (AST) expression and generates MPFR code
+ * for the expression. It handles different types of expressions such as numbers, variables,
+ * function calls, and binary operations. The generated code is written to the provided output file stream.
+ * 
+ * @param expr The AST expression to be converted to MPFR code.
+ * @param mpfr_variables A reference to a size_t variable that keeps track of the number of MPFR variables.
+ * @param map A map that associates function names and operators with their corresponding MPFR function names.
+ * @param ofs The output file stream where the generated MPFR code will be written.
+ * @param variable_tmp A temporary string used to store variable names.
+ * @return string The name of the MPFR variable that holds the result of the expression.
+ */
 string mpfrCodeGenerator(const ast_ptr &expr, size_t &mpfr_variables, const std::map<string, string> &map, ofstream &ofs, string &variable_tmp) {
     string number_str, variable_str, call_str, binary_str, l, r;
     if (expr == nullptr) {
@@ -649,9 +820,15 @@ string mpfrCodeGenerator(const ast_ptr &expr, size_t &mpfr_variables, const std:
 }
 
 /**
- * check if the expression only contains only one parameter x
- * @param str
- * @return true or false
+ * @brief Checks if the given string contains only the simple variable 'x'.
+ * 
+ * This function uses regular expressions to determine if the input string contains
+ * only the variable 'x' without any digits attached to it. It first checks if there
+ * is an 'x' that is not part of a larger word or number, and then ensures that there
+ * are no occurrences of 'x' followed by digits.
+ * 
+ * @param str The input string to be checked.
+ * @return true if the string contains only the simple variable 'x', false otherwise.
  */
 bool containOnlySimpleX(const string &str) {
     regex pattern("(^|[^x\\d])x([^\\d]|$)");

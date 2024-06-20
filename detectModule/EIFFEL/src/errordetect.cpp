@@ -59,6 +59,13 @@ const std::vector<std::vector<double>> &handleErrorPoint(std::vector<std::vector
     return vecAfter;
 }
 
+/**
+ * Function to generate the input file for DBSCAN algorithm from the given vector of error points.
+ * The file is saved in the specified path and filename.
+ *
+ * @param vec Vector of error points, where each point is represented as a vector of two double values (x, ulp).
+ * @return True if the file is successfully generated, false otherwise.
+ */
 int geneDBSCANFile(vector<vector<double>> vec) {
     ofstream file_clean("./detectModule/EIFFEL/src/galaxy.csv", ios_base::out);
     ofstream ofs("./detectModule/EIFFEL/src/galaxy.csv", ios::app);
@@ -192,6 +199,12 @@ std::vector<std::vector<double>> predictInterval(double x1, double q1, double x2
     return result;
 }
 
+/**
+ * Function to compare two vectors based on the third element (ULP)
+ * @param a The first vector to compare
+ * @param b The second vector to compare
+ * @return True if the ULP of the first vector is less than the ULP of the second vector, false otherwise
+ */
 bool compareByUlp(const std::vector<double> &a, const std::vector<double> &b) {
     return a[1] < b[1];
 }
@@ -268,6 +281,14 @@ void printMaxError(std::vector<double> &vec) {
     else std::cout << "x = " << setprecision(16) << vec[0] << ", maximum ULP = " << setprecision(5) << vec[1] << std::endl;
 }
 
+/**
+ * Prints the maximum error for a two-parameter function within a given interval.
+ * @param vec A vector containing the x1, x2, and maximum ULP values.
+ * @note The vector should have exactly three elements: x1, x2, and maximum ULP.
+ * @note If the maximum ULP is zero, it means that the function returned NaN or Inf for the given x1 and x2.
+ * @note The function uses std::setprecision to control the precision of the output.
+ * @return void
+ */
 void printMaxError2(std::vector<double> vec) {
     if (vec[2] == 0) std::cout << "x1 = " << vec[0] << ", x2 = " << vec[1] << ", maximum ULP = NaN or Inf" << std::endl;
     else std::cout << "x1 = " << setprecision(16) << vec[0] << ", x2 = " << setprecision(16) << vec[1] << ", maximum ULP = " << setprecision(5) << vec[2] << std::endl;
@@ -385,6 +406,14 @@ int detectNoSpan(double left_endpoint, double right_endpoint) {
     return 0;
 }
 
+/**
+ * This function is used to get the number of parameters in a given file.
+ * It uses regular expressions to search for the function definitions that match the pattern.
+ * The function name is expected to be in the format "getULPE[0-9]*", where the number is optional.
+ * The function returns the maximum number of parameters found in the file.
+ * @param filePath The path to the file to analyze.
+ * @return The maximum number of parameters found in the file.
+ */
 int getNumberOfParameters(const std::string &filePath) {
     std::ifstream file(filePath);
     std::string content((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
@@ -491,6 +520,14 @@ std::vector<std::vector<double>> handleErrorPoint2(std::vector<std::vector<doubl
     return result;
 }
 
+/**
+ * Function to obtain the maximum ULP value and its corresponding x1 and x2 coordinates in the given interval.
+ *
+ * @param left The lower bound of the interval.
+ * @param right The upper bound of the interval.
+ *
+ * @return A vector containing the x1, x2 coordinates and the maximum ULP value.
+ */
 std::vector<double> obtainMaxUlpInterval2(double left, double right) {
     std::vector<double> result;
     std::vector<std::vector<double>> vec = getTwoParaErrorAllPoint(left, right, left, right);
@@ -501,6 +538,20 @@ std::vector<double> obtainMaxUlpInterval2(double left, double right) {
     return result;
 }
 
+/**
+ * @brief Detects and returns the maximum error within a specified interval.
+ *
+ * This function takes a vector of intervals and a pair of left and right bounds.
+ * It iterates over each interval, generates random points within the interval,
+ * calculates the error for each point, and finds the maximum error.
+ *
+ * @param vec_interval Vector of intervals within which to detect the maximum error.
+ * @param left Left bound of the input range.
+ * @param right Right bound of the input range.
+ * @param sign Sign indicating the direction of the interval (0 for x1-axis, 1 for x2-axis).
+ *
+ * @return Vector containing the x1, x2, and maximum error for the specified interval.
+ */
 std::vector<double> detectAllIntervalGetMaximumError2(std::vector<std::vector<double>> vec_interval, double left, double right, int sign) {
     std::vector<double> result;
     std::vector<std::vector<double>> temp;
@@ -530,6 +581,17 @@ std::vector<double> detectAllIntervalGetMaximumError2(std::vector<std::vector<do
     return result;
 }
 
+/**
+ * @brief Creates curve points for two-parameter error detection and writes them to a CSV file.
+ *
+ * This function sorts the input vector based on ULP values, prints the sorted values,
+ * and writes the curve points to a CSV file. The curve points are adjusted based on
+ * their values to create a smooth curve.
+ *
+ * @param v A vector of vectors containing the error data points. Each inner vector
+ *          should contain at least two elements, where the second element is used
+ *          for sorting and writing to the CSV file.
+ */
 void createCurvePointsTwoPara(std::vector<std::vector<double>> v) {
     sort(v.begin(), v.end(), compareByUlp);
     for (int i = 0; i < v.size(); ++i) {
@@ -582,6 +644,18 @@ void createCurvePointsTwoPara(std::vector<std::vector<double>> v) {
     ofs.close();
 }
 
+/**
+ * @brief Detects the maximum error in a given interval for two parameters.
+ *
+ * This function generates error data points for two parameters within a specified interval,
+ * processes the data to retain the top 1000 points with the highest errors, and then applies
+ * the DBSCAN clustering algorithm to determine the parameters for curve fitting. It then
+ * predicts the error intervals and detects the maximum error along both dimensions.
+ *
+ * @param left The left endpoint of the interval.
+ * @param right The right endpoint of the interval.
+ * @return Returns true if the detection is successful, otherwise false.
+ */
 int detectNoSpan2(double left, double right) {
     std::vector<std::vector<double>> vecErrorDataSet;
     // 先生成x1和x2在[0.01,100]的输入集
@@ -680,6 +754,18 @@ int detectNoSpan2(double left, double right) {
     return true;
 }
 
+/**
+ * @brief Detects the maximum error for two parameters within a specified interval.
+ *
+ * This function checks the validity of the interval endpoints and determines the appropriate
+ * method to detect the maximum error based on the interval range. If the interval is less than
+ * a predefined range, it directly returns the maximum error. Otherwise, it performs a more
+ * comprehensive error detection process.
+ *
+ * @param left The left endpoint of the interval.
+ * @param right The right endpoint of the interval.
+ * @return Returns true if the detection is successful, otherwise false.
+ */
 int twoPara(double left, double right) {
     if (left >= right) {
         std::cout << "ERROR: left endpoint must be smaller than right endpoint" << std::endl;
@@ -699,6 +785,20 @@ int twoPara(double left, double right) {
     return true;
 }
 
+/**
+ * @brief Generates error data points for three parameters within specified intervals.
+ * This function generates a set of error data points for three parameters (x1, x2, x3)
+ * within the specified intervals. It uses random values within the given ranges for each
+ * parameter and computes the error using the threeParaErrorDetect function.
+ * @param left_x1 The left endpoint of the interval for the first parameter (x1).
+ * @param right_x1 The right endpoint of the interval for the first parameter (x1).
+ * @param left_x2 The left endpoint of the interval for the second parameter (x2).
+ * @param right_x2 The right endpoint of the interval for the second parameter (x2).
+ * @param left_x3 The left endpoint of the interval for the third parameter (x3).
+ * @param right_x3 The right endpoint of the interval for the third parameter (x3).
+ * @return A vector of vectors containing the error data points. Each inner vector contains
+ *         the values of x1, x2, x3, and the computed error.
+ */
 std::vector<std::vector<double>> getThreeParaErrorAllPoint(double left_x1, double right_x1, double left_x2, double right_x2, double left_x3, double right_x3) {
     std::vector<std::vector<double>> result;
     double x1, x2, x3;
@@ -712,6 +812,18 @@ std::vector<std::vector<double>> getThreeParaErrorAllPoint(double left_x1, doubl
     return result;
 }
 
+/**
+ * @brief Detects the error for three parameters.
+ * This function computes the error for three given parameters (x1, x2, x3).
+ * It calculates the original value using the getComputeValueE3 function and
+ * then determines the ULP (Unit in the Last Place) error using the getULPE3 function.
+ * If the ULP is NaN or infinity, it sets the error to 0.0.
+ * @param x1 The first parameter.
+ * @param x2 The second parameter.
+ * @param x3 The third parameter.
+ * @return A vector of vectors containing the parameters and the computed error.
+ *         Each inner vector contains the values of x1, x2, x3, and the computed error.
+ */
 std::vector<std::vector<double>> threeParaErrorDetect(double x1, double x2, double x3) {
     std::vector<std::vector<double>> result;
     double origin = getComputeValueE3(x1, x2, x3);
@@ -724,6 +836,14 @@ std::vector<std::vector<double>> threeParaErrorDetect(double x1, double x2, doub
     return result;
 }
 
+/**
+ * @brief Obtains the maximum ULP (Unit in the Last Place) error within a specified interval for three parameters.
+ * This function generates error data points for three parameters within the specified interval,
+ * identifies the data point with the maximum ULP error, and returns the parameters and the error value.
+ * @param left The left endpoint of the interval.
+ * @param right The right endpoint of the interval.
+ * @return A vector containing the parameters (x1, x2, x3) and the maximum ULP error.
+ */
 std::vector<double> obtainMaxUlpInterval3(double left, double right) {
     std::vector<double> result;
     std::vector<std::vector<double>> vec = getThreeParaErrorAllPoint(left, right, left, right, left, right);
@@ -735,6 +855,17 @@ std::vector<double> obtainMaxUlpInterval3(double left, double right) {
     return result;
 }
 
+/**
+ * @brief Processes error data points to retain only the maximum ULP (Unit in the Last Place) error points.
+ *
+ * This function iterates through the provided error data points in chunks of size G, 
+ * identifies the data point with the maximum ULP error within each chunk, and retains 
+ * it if the error is greater than or equal to a predefined ULP threshold.
+ *
+ * @param vec A vector of vectors containing error data points. Each inner vector contains 
+ *            the values of the parameters and the computed error.
+ * @return A vector of vectors containing the filtered error data points with the maximum ULP error.
+ */
 std::vector<std::vector<double>> handleErrorPoint3(std::vector<std::vector<double>> vec) {
     std::vector<std::vector<double>> result;
     for (size_t i = 0; i < vec.size(); i += G) {
@@ -753,6 +884,19 @@ std::vector<std::vector<double>> handleErrorPoint3(std::vector<std::vector<doubl
     return result;
 }
 
+/**
+ * @brief Detects the maximum ULP (Unit in the Last Place) error for three parameters within specified intervals.
+ *
+ * This function iterates through the provided intervals, generates random values for the three parameters
+ * within each interval, computes the error for each set of parameters, and identifies the data point with
+ * the maximum ULP error.
+ *
+ * @param vec_interval A vector of vectors containing the intervals for the parameters. Each inner vector
+ *                     contains the left and right endpoints of the interval.
+ * @param left The left endpoint of the interval for the second and third parameters.
+ * @param right The right endpoint of the interval for the second and third parameters.
+ * @return A vector containing the parameters (x1, x2, x3) and the maximum ULP error.
+ */
 std::vector<double> detectAllIntervalGetMaximumError3(std::vector<std::vector<double>> vec_interval, double left, double right) {
     std::vector<double> result;
     std::vector<std::vector<double>> temp;
@@ -777,6 +921,20 @@ std::vector<double> detectAllIntervalGetMaximumError3(std::vector<std::vector<do
     result.push_back(maxULP->at(3));
     return result;
 }
+
+/**
+ * @brief Detects the maximum ULP (Unit in the Last Place) error for three parameters within a specified interval.
+ *
+ * This function generates error data points for three parameters within the specified interval,
+ * processes the data points to retain only the maximum ULP error points, and applies the DBSCAN
+ * clustering algorithm to determine the optimal parameters for further analysis. If the DBSCAN
+ * clustering results in less than three clusters, it directly returns the maximum error within the interval.
+ * Otherwise, it fits a curve to the data points and predicts the interval for further error detection.
+ *
+ * @param left The left endpoint of the interval.
+ * @param right The right endpoint of the interval.
+ * @return An integer indicating the success of the function. Returns true (1) if successful.
+ */
 int detectNoSpan3(double left, double right) {
     std::vector<std::vector<double>> vecErrorDataSet;
     if (left >= 0) {
@@ -844,6 +1002,16 @@ int detectNoSpan3(double left, double right) {
     return true;
 }
 
+/**
+ * @brief Detects the maximum ULP (Unit in the Last Place) error for three parameters within a specified interval.
+ *
+ * This function validates the input interval, checks for specific conditions, and either directly returns the maximum error
+ * within the interval or performs a more detailed error detection process.
+ *
+ * @param left The left endpoint of the interval.
+ * @param right The right endpoint of the interval.
+ * @return An integer indicating the success of the function. Returns true (1) if successful, false (0) otherwise.
+ */
 int threePara(double left, double right) {
     if (left >= right) {
         std::cout << "ERROR: left endpoint must be smaller than right endpoint" << std::endl;
@@ -862,6 +1030,24 @@ int threePara(double left, double right) {
     }
     return true;
 }
+
+/**
+ * @brief Computes the error for a set of four parameters and returns the results.
+ *
+ * This function calculates the error for a given set of four parameters (x1, x2, x3, x4).
+ * It first computes the original value using the `getComputeValueE4` function and then
+ * calculates the ULP (Unit in the Last Place) error using the `getULPE4` function.
+ * If the ULP error is NaN or infinity, it sets the error to 0.0. Otherwise, it uses the
+ * computed ULP error. The results are stored in a vector of vectors, where each inner
+ * vector contains the values of x1, x2, x3, x4, and the computed error.
+ *
+ * @param x1 The first parameter.
+ * @param x2 The second parameter.
+ * @param x3 The third parameter.
+ * @param x4 The fourth parameter.
+ * @return A vector of vectors containing the parameters and the computed error.
+ *         Each inner vector contains the values of x1, x2, x3, x4, and the computed error.
+ */
 std::vector<std::vector<double>> fourParaErrorDetect(double x1, double x2, double x3, double x4) {
     std::vector<std::vector<double>> result;
     double origin = getComputeValueE4(x1, x2, x3, x4);
@@ -874,6 +1060,18 @@ std::vector<std::vector<double>> fourParaErrorDetect(double x1, double x2, doubl
     return result;
 }
 
+/**
+ * @brief Generates error data points for four parameters within a specified interval.
+ *
+ * This function generates random values for four parameters (x1, x2, x3, x4) within the specified interval
+ * and computes the error for each set of parameters using the `fourParaErrorDetect` function. The results
+ * are stored in a vector of vectors, where each inner vector contains the values of the parameters and the computed error.
+ *
+ * @param left The left endpoint of the interval.
+ * @param right The right endpoint of the interval.
+ * @return A vector of vectors containing the parameters and the computed error.
+ *         Each inner vector contains the values of x1, x2, x3, x4, and the computed error.
+ */
 std::vector<std::vector<double>> getFourParaErrorAllPoint(double left, double right) {
     std::vector<std::vector<double>> result;
     double x1, x2, x3, x4;
@@ -888,6 +1086,16 @@ std::vector<std::vector<double>> getFourParaErrorAllPoint(double left, double ri
     return result;
 }
 
+/**
+ * @brief Obtains the maximum ULP (Unit in the Last Place) error for four parameters within a specified interval.
+ *
+ * This function generates error data points for four parameters within the specified interval,
+ * identifies the data point with the maximum ULP error, and returns the parameters and the error value.
+ *
+ * @param left The left endpoint of the interval.
+ * @param right The right endpoint of the interval.
+ * @return A vector containing the parameters (x1, x2, x3, x4) and the maximum ULP error.
+ */
 std::vector<double> obtainMaxUlpInterval4(double left, double right) {
     std::vector<double> result;
     std::vector<std::vector<double>> vec = getFourParaErrorAllPoint(left, right);
@@ -900,6 +1108,16 @@ std::vector<double> obtainMaxUlpInterval4(double left, double right) {
     return result;
 }
 
+/**
+ * @brief Processes a vector of error points to retain only the maximum ULP (Unit in the Last Place) error points.
+ *
+ * This function iterates through the input vector in chunks of size G, identifies the maximum ULP error
+ * within each chunk, and retains only those points where the ULP error is greater than or equal to a specified threshold.
+ *
+ * @param vec A vector of vectors containing error points. Each inner vector represents an error point with
+ *            the last element being the ULP error value.
+ * @return A vector of vectors containing the filtered error points with the maximum ULP error in each chunk.
+ */
 std::vector<std::vector<double>> handleErrorPoint4(std::vector<std::vector<double>> vec) {
     std::vector<std::vector<double>> result;
     for (size_t i = 0; i < vec.size(); i += G) {
@@ -918,6 +1136,18 @@ std::vector<std::vector<double>> handleErrorPoint4(std::vector<std::vector<doubl
     return result;
 }
 
+/**
+ * @brief Detects the maximum ULP (Unit in the Last Place) error for four parameters within specified intervals.
+ *
+ * This function iterates through a list of intervals, generates random values for four parameters within each interval,
+ * computes the ULP error for each set of parameters, and identifies the maximum ULP error within each interval.
+ * Finally, it returns the parameters and the maximum ULP error across all intervals.
+ *
+ * @param vec_interval A vector of vectors containing the intervals. Each inner vector represents an interval with two elements: the left and right endpoints.
+ * @param left The left endpoint of the overall interval.
+ * @param right The right endpoint of the overall interval.
+ * @return A vector containing the parameters (x1, x2, x3, x4) and the maximum ULP error.
+ */
 std::vector<double> detectAllIntervalGetMaximumError4(std::vector<std::vector<double>> vec_interval, double left, double right) {
     std::vector<double> result;
     std::vector<std::vector<double>> temp;
@@ -945,6 +1175,18 @@ std::vector<double> detectAllIntervalGetMaximumError4(std::vector<std::vector<do
     return result;
 }
 
+/**
+ * @brief Detects the maximum ULP (Unit in the Last Place) error for four parameters within a specified interval.
+ *
+ * This function generates error data points for four parameters within the specified interval,
+ * processes the data points to retain only the maximum ULP error points, and applies the DBSCAN clustering algorithm
+ * to identify clusters. If the number of clusters is less than 3, it returns the maximum ULP error for the interval.
+ * Otherwise, it fits a curve to the data points, predicts intervals, and detects the maximum ULP error within those intervals.
+ *
+ * @param left The left endpoint of the interval.
+ * @param right The right endpoint of the interval.
+ * @return An integer indicating the success of the detection process. Returns true (1) if successful, false (0) otherwise.
+ */
 int detectNoSpan4(double left, double right) {
     std::vector<std::vector<double>> vecErrorDataSet;
     if (left >= 0) {
@@ -1012,6 +1254,18 @@ int detectNoSpan4(double left, double right) {
     return true;
 }
 
+/**
+ * @brief Detects the maximum ULP (Unit in the Last Place) error for four parameters within a specified interval.
+ *
+ * This function validates the input interval and determines the maximum ULP error for four parameters.
+ * It first checks if the left endpoint is smaller than the right endpoint and if the interval is valid.
+ * If the interval is valid and within a certain range, it directly returns the maximum error.
+ * Otherwise, it performs a more detailed error detection process.
+ *
+ * @param left The left endpoint of the interval.
+ * @param right The right endpoint of the interval.
+ * @return An integer indicating the success of the detection process. Returns true (1) if successful, false (0) otherwise.
+ */
 int fourPara(double left, double right) {
     if (left >= right) {
         std::cout << "ERROR: left endpoint must be smaller than right endpoint" << std::endl;
@@ -1031,6 +1285,16 @@ int fourPara(double left, double right) {
     return true;
 }
 
+/**
+ * @brief Obtains the maximum ULP (Unit in the Last Place) error for five parameters within a specified interval.
+ *
+ * This function generates error data points for five parameters within the specified interval,
+ * identifies the data point with the maximum ULP error, and returns the parameters and the error value.
+ *
+ * @param left The left endpoint of the interval.
+ * @param right The right endpoint of the interval.
+ * @return A vector containing the parameters (x1, x2, x3, x4, x5) and the maximum ULP error.
+ */
 std::vector<double> obtainMaxUlpInterval5(double left, double right) {
     std::vector<double> result;
     std::vector<std::vector<double>> vec = getFiveParaErrorAllPoint(left, right);
@@ -1043,6 +1307,24 @@ std::vector<double> obtainMaxUlpInterval5(double left, double right) {
     result.push_back(maxError->at(5));
     return result;
 }
+
+/**
+ * @brief Detects the error for five parameters and returns the results.
+ *
+ * This function computes the error for a given set of five parameters (x1, x2, x3, x4, x5).
+ * It calculates the original value using `getComputeValueE5` and the ULP (Unit in the Last Place) error
+ * using `getULPE5`. If the ULP error is NaN or infinity, it sets the error to 0.0.
+ * The results are stored in a vector of vectors, where each inner vector contains the values of the parameters
+ * and the computed error.
+ *
+ * @param x1 The first parameter.
+ * @param x2 The second parameter.
+ * @param x3 The third parameter.
+ * @param x4 The fourth parameter.
+ * @param x5 The fifth parameter.
+ * @return A vector of vectors containing the parameters and the computed error.
+ *         Each inner vector contains the values of x1, x2, x3, x4, x5, and the computed error.
+ */
 std::vector<std::vector<double>> fiveParaErrorDetect(double x1, double x2, double x3, double x4, double x5) {
     std::vector<std::vector<double>> result;
     double origin = getComputeValueE5(x1, x2, x3, x4, x5);
@@ -1054,6 +1336,18 @@ std::vector<std::vector<double>> fiveParaErrorDetect(double x1, double x2, doubl
     }
     return result;
 }
+
+/**
+ * @brief Generates error data points for five parameters within a specified interval.
+ *
+ * This function generates random values for five parameters (x1, x2, x3, x4, x5) within the specified interval [left, right].
+ * It then computes the error for each set of parameters using the `fiveParaErrorDetect` function and stores the results.
+ *
+ * @param left The left endpoint of the interval.
+ * @param right The right endpoint of the interval.
+ * @return A vector of vectors containing the parameters and the computed error.
+ *         Each inner vector contains the values of x1, x2, x3, x4, x5, and the computed error.
+ */
 std::vector<std::vector<double>> getFiveParaErrorAllPoint(double left, double right) {
     std::vector<std::vector<double>> result;
     double x1, x2, x3, x4, x5;
@@ -1069,6 +1363,16 @@ std::vector<std::vector<double>> getFiveParaErrorAllPoint(double left, double ri
     return result;
 }
 
+/**
+ * @brief Processes a vector of error points to retain only the maximum ULP (Unit in the Last Place) error points.
+ *
+ * This function iterates through the input vector in chunks of size G, identifies the maximum ULP error
+ * within each chunk, and retains only those points where the ULP error is greater than or equal to a specified threshold.
+ *
+ * @param vec A vector of vectors containing error points. Each inner vector represents an error point with
+ *            the last element being the ULP error value.
+ * @return A vector of vectors containing the filtered error points with the maximum ULP error in each chunk.
+ */
 std::vector<std::vector<double>> handleErrorPoint5(std::vector<std::vector<double>> vec) {
     std::vector<std::vector<double>> result;
     for (size_t i = 0; i < vec.size(); i += G) {
@@ -1087,6 +1391,18 @@ std::vector<std::vector<double>> handleErrorPoint5(std::vector<std::vector<doubl
     return result;
 }
 
+/**
+ * @brief Detects the maximum ULP (Unit in the Last Place) error for five parameters within specified intervals.
+ *
+ * This function iterates through a list of intervals, generates random values for five parameters within each interval,
+ * computes the ULP error for each set of parameters, and identifies the maximum ULP error within each interval.
+ * Finally, it returns the parameters and the maximum ULP error across all intervals.
+ *
+ * @param vec_interval A vector of vectors containing the intervals. Each inner vector represents an interval with two elements: the left and right endpoints.
+ * @param left The left endpoint of the overall interval.
+ * @param right The right endpoint of the overall interval.
+ * @return A vector containing the parameters (x1, x2, x3, x4, x5) and the maximum ULP error.
+ */
 std::vector<double> detectAllIntervalGetMaximumError5(std::vector<std::vector<double>> vec_interval, double left, double right) {
     std::vector<double> result;
     std::vector<std::vector<double>> temp;
@@ -1180,6 +1496,19 @@ int detectNoSpan5(double left, double right) {
     }
     return true;
 }
+
+/**
+ * @brief Detects the maximum ULP (Unit in the Last Place) error for five parameters within a specified interval.
+ *
+ * This function validates the input interval and determines the maximum ULP error for five parameters.
+ * It first checks if the left endpoint is smaller than the right endpoint and if the interval is valid.
+ * If the interval is valid and within a certain range, it directly returns the maximum error.
+ * Otherwise, it performs a more detailed error detection process.
+ *
+ * @param left The left endpoint of the interval.
+ * @param right The right endpoint of the interval.
+ * @return An integer indicating the success of the detection process. Returns true (1) if successful, false (0) otherwise.
+ */
 int fivePara(double left, double right) {
     if (left >= right) {
         std::cout << "ERROR: left endpoint must be smaller than right endpoint" << std::endl;
@@ -1199,6 +1528,17 @@ int fivePara(double left, double right) {
     return true;
 }
 
+/**
+ * @brief Detects the maximum ULP (Unit in the Last Place) error for a given interval based on the number of parameters.
+ *
+ * This function determines the number of parameters in the expression by calling `getNumberOfParameters`.
+ * Based on the number of parameters, it calls the appropriate function to detect the maximum ULP error.
+ * The function supports up to five parameters.
+ *
+ * @param left The left endpoint of the interval.
+ * @param right The right endpoint of the interval.
+ * @return An integer indicating the success of the detection process. Returns true (1) if successful.
+ */
 int eiffel(double left, double right) {
     int paraNum = getNumberOfParameters("./detectModule/EIFFEL/src/getMultiResult.cpp");
     if (paraNum == 0) { // 这里0是表示1个参数，因为单参的时候函数是getULPE，后面没有跟数字

@@ -188,6 +188,23 @@ ast_ptr ParseExpressionFromString()
     }
     return nullptr;
 }
+
+/**
+ * @brief Parses a mathematical expression from a string and returns the abstract syntax tree (AST).
+ *
+ * This function takes a mathematical expression in string format and parses it to create an AST.
+ * It clears the existing filestring and resets the flag to zero before parsing the new expression.
+ *
+ * @param str The mathematical expression in string format.
+ * @return A pointer to the root of the AST if the expression is successfully parsed, otherwise nullptr.
+ *
+ * @note This function assumes that the getNextTokenForStr() function is already implemented and
+ *       that the NumberExprAST, VariableExprAST, CallExprAST, BinaryExprAST, and other relevant AST classes
+ *       are defined.
+ *
+ * @warning This function does not handle error recovery or any other advanced parsing features.
+ *          It is expected that the input string contains a valid mathematical expression.
+ */
 ast_ptr ParseExpressionFromString(string str)
 {
     //清空filestring，flag归零

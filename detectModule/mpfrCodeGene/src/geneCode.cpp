@@ -15,7 +15,17 @@ using std::ofstream;
 using std::string;
 using std::to_string;
 
-// this version is more faster. 0.000232973s
+/**
+ * @brief Extracts variable names from an abstract syntax tree (AST) expression.
+ *
+ * This function traverses the given AST expression and collects all variable names
+ * into the provided vector. It handles different types of AST nodes such as Number,
+ * Variable, Call, and Binary. The collected variable names are sorted and made unique.
+ *
+ * @param expr The AST expression to traverse.
+ * @param vars A vector to store the extracted variable names.
+ * @return true if the extraction is successful, false otherwise.
+ */
 bool getVariablesFromExpr(const ast_ptr &expr, vector<string> &vars)
 {
     if (expr == nullptr)
@@ -66,6 +76,17 @@ bool getVariablesFromExpr(const ast_ptr &expr, vector<string> &vars)
     return true;
 }
 
+/**
+ * @brief Generates MPFR code for high-precision arithmetic operations.
+ *
+ * This function generates C++ code that uses the MPFR library to perform
+ * high-precision arithmetic operations based on the given expression string.
+ * The generated code is written to a file located at "./detectModule/HSED/src/getresult.cpp".
+ *
+ * @param exprStr The expression string to be parsed and converted into MPFR code.
+ * @param vars A vector of variable names used in the expression.
+ * @return true if the code generation is successful, false otherwise.
+ */
 int geneMpfrCode(const string exprStr, vector<string> vars)
 {
     ofstream file_clean("./detectModule/HSED/src/getresult.cpp", ios_base::out);
@@ -182,10 +203,11 @@ int geneMpfrCode(const string exprStr, vector<string> vars)
 }
 
 /**
- * generate high-precision version code from multi parameter expressions to EIFFEL/src
- * @param exprStr
- * @param vars
- * @return true
+ * Generates multiple MPFR (Multiple Precision Floating-Point Reliable) code.
+ * 
+ * @param exprStr The expression string to be parsed and evaluated.
+ * @param vars A vector of variable names used in the expression.
+ * @return true if the code generation is successful, false otherwise.
  */
 int geneMultiMpfrCode(const string exprStr, vector<string> vars) {
     ofstream file_clean("./detectModule/EIFFEL/src/getMultiResult.cpp", ios_base::out);

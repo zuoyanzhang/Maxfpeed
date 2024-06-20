@@ -15,10 +15,15 @@ int CurTokForStr;                 // CurTok is the current token the parser is l
 // BinopPrecedence - This holds the precedence for each binary operator that is defined.
 std::map<char, int> BinopPrecedenceForStr;
 
-//===----------------------------------------------------------------------===//
-// Lexer
-//===----------------------------------------------------------------------===//
-
+/**
+ * @brief Retrieves the next character from the global string `filestring`.
+ *
+ * This function fetches the next character from the global string `filestring` based on the current
+ * position indicated by the global index `flag`. If the end of the string is reached, it returns
+ * a semicolon (';') as a termination character.
+ *
+ * @return The next character from `filestring` if available; otherwise, a semicolon (';').
+ */
 char getCharFromStr()
 {
     if(flag < filestring.size())
@@ -29,7 +34,19 @@ char getCharFromStr()
     //遍历完filestring，返回';'作为结束符
     return ';';
 }
-// gettokForStr - Return the next token from string.
+
+/**
+ * @brief Tokenizes the input string and returns the next token.
+ *
+ * This function reads characters from the global string `filestring` and identifies tokens such as
+ * identifiers, numbers, operators, and comments. It handles whitespace, minus signs, and scientific
+ * notation for numbers. The function maintains the state of the last character read and a flag for
+ * handling minus signs.
+ *
+ * @return The next token from the input string. The token can be an identifier, number, operator,
+ *         or special tokens like `tok_def_forstr`, `tok_extern_forstr`, `tok_identifier_forstr`,
+ *         `tok_number_forstr`, `tok_eof_forstr`, or the ASCII value of characters.
+ */
 int gettokForStr()
 {
     static int LastChar = ' ';
@@ -132,7 +149,21 @@ int gettokForStr()
 /// lexer and updates CurTok with its results.
 int getNextTokenForStr() { return CurTokForStr = gettokForStr(); }
 
-// Install standard binary operators.
+/**
+ * @brief Installs standard binary operators with their precedence levels.
+ *
+ * This function initializes the `BinopPrecedenceForStr` map with standard binary operators
+ * and assigns them precedence levels. The precedence levels determine the order of operations
+ * for these operators during parsing. A higher number indicates higher precedence.
+ *
+ * The operators and their precedence levels are as follows:
+ * - '<' : 10
+ * - '+' : 20
+ * - '-' : 20
+ * - '*' : 40
+ * - '/' : 40
+ * - '`' : 50 (highest precedence)
+ */
 void installOperatorsForStr()
 {
     // 1 is lowest precedence.
@@ -144,7 +175,15 @@ void installOperatorsForStr()
     BinopPrecedenceForStr['`'] = 50;  // highest.
 }
 
-/// GetTokPrecedenceForStr - Get the precedence of the pending binary operator token.
+/**
+ * @brief Retrieves the precedence of the current binary operator token.
+ *
+ * This function checks if the current token is an ASCII character and if it is a declared
+ * binary operator. If the token is a valid binary operator, it returns its precedence level.
+ * Otherwise, it returns -1 indicating an invalid or unrecognized token.
+ *
+ * @return The precedence of the current binary operator token if valid; otherwise, -1.
+ */
 int GetTokPrecedenceForStr()
 {
     if(!isascii(CurTokForStr))
@@ -163,6 +202,17 @@ ast_ptr LogErrorForStr(const char *Str)
     fprintf(stderr, "Error: %s\n", Str);
     return nullptr;
 }
+
+/**
+ * @brief Logs an error message and returns a null pointer.
+ *
+ * This function logs an error message to the standard error output and returns a null pointer
+ * of type `std::unique_ptr<PrototypeAST>`. It is used for error handling in the context of
+ * parsing or processing Abstract Syntax Trees (AST).
+ *
+ * @param Str The error message to be logged.
+ * @return A null pointer of type `std::unique_ptr<PrototypeAST>`.
+ */
 std::unique_ptr<PrototypeAST> LogErrorPForStr(const char *Str)
 {
     LogErrorForStr(Str);

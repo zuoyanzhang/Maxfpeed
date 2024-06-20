@@ -200,22 +200,51 @@ using ast_ptr = std::unique_ptr<ExprAST>;  // typedef std::unique_ptr<ExprAST> a
 
 bool isEqual(const std::unique_ptr<ExprAST> &expr1, const std::unique_ptr<ExprAST> &expr2);
 
+/**
+ * This function checks if the given expression represents a fraction.
+ */
 bool isFraction(const std::unique_ptr<ExprAST> &expr);
 
+/**
+ * This function checks if all the expressions in the given vector are constants.
+ * A constant expression is an expression that does not contain any variables.
+ */
 bool isConstant(const vector<std::unique_ptr<ExprAST>> &exprs);
 
+/**
+ * This function retrieves the numerator of a given expression.
+ */
 std::unique_ptr<ExprAST> getNumerator(const std::unique_ptr<ExprAST> &expr);
 
+/**
+ * This function retrieves the denominator of a given expression.
+ */
 std::unique_ptr<ExprAST> getDenominator(const std::unique_ptr<ExprAST> &expr);
 
+/**
+ * This function creates a new binary expression node.
+ */
 std::unique_ptr<ExprAST> createBinaryExpr(const std::unique_ptr<ExprAST> &expr1, const std::unique_ptr<ExprAST> &expr2, const char op);
 
+/**
+ * This function creates a new binary expression node representing addition.
+ */
 std::unique_ptr<ExprAST> addExpr(const std::unique_ptr<ExprAST> &expr1, const std::unique_ptr<ExprAST> &expr2);
 
+/**
+ * This function creates a new binary expression node representing multiplication.
+ */
 std::unique_ptr<ExprAST> mulExpr(const std::unique_ptr<ExprAST> &expr1, const std::unique_ptr<ExprAST> &expr2);
 
+/**
+ * This function creates a new binary expression node representing division.
+ */
 std::unique_ptr<ExprAST> divExpr(const std::unique_ptr<ExprAST> &expr1, const std::unique_ptr<ExprAST> &expr2);
 
+/**
+ * This function appends the contents of the 'origin' vector to the 'dest' vector.
+ * It is a utility function used to combine multiple vectors of unique pointers to ExprAST.
+ */
 void mineAppend(vector<ast_ptr> &dest, vector<ast_ptr> &origin);
 
 //===----------------------------------------------------------------------===//
@@ -234,14 +263,18 @@ void printAST(const ast_ptr &expr, const size_t PRECISION = DOUBLE_PRECISION);
 
 void printAST(const ast_ptr &expr, string &result, const size_t PRECISION = DOUBLE_PRECISION);
 
+/**
+ * This function calculates the number of parameters in the given expression using the MPFR library.
+ */
 string getMpfrParameterNumber(const ast_ptr &expr, size_t &mpfr_variabless);
 
+/**
+ * This function generates a C++ code snippet using the MPFR library to evaluate the given expression.
+ */
 string mpfrCodeGenerator(const ast_ptr &expr, size_t &mpfr_variables, const std::map<string, string> &map, ofstream &ofs, string &variable_tmp);
 
 /**
  * check if the expression only contains only one parameter x
- * @param str
- * @return
  */
 bool containOnlySimpleX(const string &str);
 
