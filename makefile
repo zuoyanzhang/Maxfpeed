@@ -1,9 +1,12 @@
 TAR = bin/mpfrCodeGene.exe
 CPP = detectModule/mpfrCodeGene/src/*.cpp
 CC := g++
-Include = -lm -lmpfr -I ./detectModule/
+GMP_PREFIX := /opt/homebrew/opt/gmp
+MPFR_PREFIX := /opt/homebrew/opt/mpfr
+Include = -I$(GMP_PREFIX)/include -I$(MPFR_PREFIX)/include -I./detectModule/ -L$(GMP_PREFIX)/lib -L$(MPFR_PREFIX)/lib -lm -lmpfr
+CXXFLAGS = --std=c++17
 $(TAR) : $(CPP)
-	$(CC) $(CPP) -o $(TAR) $(Include)
+	$(CC) $(CPP) -o $(TAR) $(Include) $(CXXFLAGS)	
 .PHONY:
 clean:
 	rm $(TAR)

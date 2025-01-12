@@ -1,0 +1,4322 @@
+Starting automated testing...
+Warmup runs per test: 1
+Measured runs per test: 1
+=========================================
+Testing expression: 1.0 + 0.5 * x - 0.125 * x * x + 0.0625 * x * x * x - 0.0390625 * x * x * x * x
+Range: [0, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 5130.00ms
+Average execution time: 5130.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 2.96250472, maximum ULP = 7263
+----------------------------------------
+Testing expression: 1.0 / (sqrt(x + 1.0) + sqrt(x))
+Range: [1, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 23440.00ms
+Average execution time: 23440.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 27, Eps: 1.41517
+=====4. DBSCAN completed and successfully!=====
+no.         x          ULP
+1       0.642337      1.82735
+2        3.66023      2.21713
+3         16.106      2.24603
+4        64.1132      2.38026
+Function monotonically increasing, directly detecting endpoint intervals
+x = 16476.570796, maximum ULP = 2.3914
+----------------------------------------
+Testing expression: (exp(x) - 1.0) / x
+Range: [0.01, 708]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 14370.00ms
+Average execution time: 14370.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 0.01, maximum ULP = 48.826
+----------------------------------------
+Testing expression: (exp(x) - 1.0) / log(exp(x))
+Range: [0.01, 708]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 18580.00ms
+Average execution time: 18580.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 36.73912672, maximum ULP = 2.191
+----------------------------------------
+Testing expression: exp(x) - 1.0
+Range: [0.01, 708]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 29320.00ms
+Average execution time: 29320.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 115, Eps: 10.353
+=====4. DBSCAN completed and successfully!=====
+no.         x          ULP
+1       0.222779      3.92116
+2        37.0071        1.005
+3        91.4463     0.512907
+Function monotonically increasing, directly detecting endpoint intervals
+x = 519.7023024, maximum ULP = 0.51096
+----------------------------------------
+Testing expression: log(x + 1.0) - log(x)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 69940.00ms
+Average execution time: 69940.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 79, Eps: 8.61139
+=====4. DBSCAN completed and successfully!=====
+no.         x          ULP
+1        7.80662      39.0914
+2        15.7522      71.8319
+3         40.282      127.862
+4        55.9744      255.501
+5        89.6532      504.995
+Function monotonically increasing, directly detecting endpoint intervals
+x = 24101.46196618, maximum ULP = 2.6187e+05
+----------------------------------------
+Testing expression: 1.0 / x - 1.0 / tan(x)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 7020.00ms
+Average execution time: 7020.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 14.06619424, maximum ULP = 69725
+----------------------------------------
+Testing expression: sqrt((exp(2 * x) - 1.0) / (exp(x) - 1.0))
+Range: [0.01, 708]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 15450.00ms
+Average execution time: 15450.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 0.01139986, maximum ULP = 30.559
+----------------------------------------
+Testing expression: exp(x) / (exp(x) - 1.0)
+Range: [0.01, 708]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 9590.00ms
+Average execution time: 9590.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 0.01, maximum ULP = 75.227
+----------------------------------------
+Testing expression: (x - sin(x)) / (x - tan(x))
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 9180.00ms
+Average execution time: 9180.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 0.01, maximum ULP = 52282
+----------------------------------------
+Testing expression: exp(x) - 2.0 + exp(-x)
+Range: [0.01, 708]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 10070.00ms
+Average execution time: 10070.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 0.01059994, maximum ULP = 7267.9
+----------------------------------------
+Testing expression: (4.0 * x) / (x / 1.11 + 1.0)
+Range: [0.1, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 18300.00ms
+Average execution time: 18300.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 24, Eps: 1.25274
+=====4. DBSCAN completed and successfully!=====
+no.         x          ULP
+1       0.299371       1.3196
+2        3.42626      1.68846
+3        7.88361      1.86146
+Function monotonically increasing, directly detecting endpoint intervals
+x = 8.859970800000001, maximum ULP = 1.6991
+----------------------------------------
+Testing expression: (4.0 * x * x) / (1 + x / 1.11 * x / 1.11)
+Range: [0.1, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 10180.00ms
+Average execution time: 10180.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 2.15018596, maximum ULP = 2.6853
+----------------------------------------
+Testing expression: log(exp(x) - 1.0)
+Range: [0.01, 708]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 10930.00ms
+Average execution time: 10930.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 0.69313168, maximum ULP = 6127.2
+----------------------------------------
+Testing expression: x - (x * x * x) / 6.0 + (x * x * x * x * x) / 120.0 - (x * x * x * x * x * x * x) / 5040.0
+Range: [0, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 5890.00ms
+Average execution time: 5890.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 3.0786931, maximum ULP = 42993
+----------------------------------------
+Testing expression: ((35000000.0 + ((0.401 * (1000.0 / x)) * (1000.0 / x))) * (x - (1000.0 * 4.27e-5))) - ((1.3806503e-23 * 1000.0) * 300.0)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 48340.00ms
+Average execution time: 48340.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 7, Eps: 0.384022
+=====4. DBSCAN completed and successfully!=====
+no.         x          ULP
+1        0.20858      1.78381
+2        1.93361      1.55189
+3        3.83322      1.47889
+4        7.46245      1.41054
+5        15.2483      1.42191
+6         30.307      1.42262
+7        31.8472     0.994155
+8        60.7543      1.95011
+9        99.7328       1.5187
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 1.77037 * pow(1.65247, i - 1),   i >= 1
+The upper bound function is: x_i = 2.25491 * pow(1.60624, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+Above are the intervals: 
+[0.01, 0.0122804]
+[0.0116604, 0.0197253]
+[0.0192686, 0.0316836]
+[0.0318409, 0.0508915]
+[0.0526162, 0.0817439]
+[0.086947, 0.1313]
+[0.143678, 0.2109]
+[0.237424, 0.338756]
+[0.392337, 0.544123]
+[0.648326, 0.873993]
+[1.07134, 1.40384]
+[1.77037, 2.25491]
+[2.92549, 3.62192]
+[4.83429, 5.81768]
+[7.98855, 9.34459]
+[13.2009, 15.0097]
+[21.8141, 24.1091]
+[36.0473, 38.725]
+[59.5672, 62.2017]
+[98.4333, 99.9108]
+[160.481, 162.659]
+[257.771, 268.789]
+[414.042, 444.167]
+[665.05, 733.975]
+[1068.23, 1212.88]
+[1715.83, 2004.25]
+[2756.04, 3311.97]
+[4426.87, 5472.94]
+[7110.61, 9043.89]
+[11421.3, 14944.8]
+[18345.4, 24695.9]
+[29467.2, 40809.4]
+[47331.3, 67436.5]
+[76025.5, 100000]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+x = 0.04270000100668989, maximum ULP = 3.2364e+06
+----------------------------------------
+Testing expression: (1.0 - cos(x)) / (x * x)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 6430.00ms
+Average execution time: 6430.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 94.24777528, maximum ULP = 2.4183e+10
+----------------------------------------
+Testing expression: (((x + 1.0) * log(x + 1.0)) - (x * log(x))) - 1.0
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 56580.00ms
+Average execution time: 56580.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 174, Eps: 15.6
+=====4. DBSCAN completed and successfully!=====
+no.         x          ULP
+1        34.1558      50.5001
+2        62.6773      90.9214
+3        95.9748      127.528
+Function monotonically increasing, directly detecting endpoint intervals
+x = 29491.38016954, maximum ULP = 44606
+----------------------------------------
+Testing expression: cbrt(x + 1) - cbrt(x)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 99140.00ms
+Average execution time: 99140.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 225, Eps: 20.4761
+=====4. DBSCAN completed and successfully!=====
+no.         x          ULP
+1        31.7276      83.2367
+2        37.7378      128.549
+3        78.6707       255.63
+Function monotonically increasing, directly detecting endpoint intervals
+x = 18559.44381352, maximum ULP = 72921
+----------------------------------------
+Testing expression: ((1.0 / (x + 1.0)) - (2.0 / x)) + (1.0 / (x - 1.0))
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 72420.00ms
+Average execution time: 72420.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 133, Eps: 215.384
+=====4. DBSCAN completed and successfully!=====
+no.         x          ULP
+1        22.8071      496.604
+2        31.5562      1272.67
+3        59.2905      4075.08
+Function monotonically increasing, directly detecting endpoint intervals
+x = 27044.88098504, maximum ULP = 1.0526e+09
+----------------------------------------
+Testing expression: 1.0/(x+1) - (1.0/x)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 84840.00ms
+Average execution time: 84840.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 201, Eps: 15.3879
+=====4. DBSCAN completed and successfully!=====
+no.         x          ULP
+1        15.2725      19.4159
+2        31.5053      48.7877
+3        63.5031      78.1379
+Function monotonically increasing, directly detecting endpoint intervals
+x = 29376.12020796, maximum ULP = 32677
+----------------------------------------
+Testing expression: 1.0/sqrt(x) - 1.0 / sqrt(x+1)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 128000.00ms
+Average execution time: 128000.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 208, Eps: 37.7116
+=====4. DBSCAN completed and successfully!=====
+no.         x          ULP
+1        31.3123      139.357
+2        41.1923      207.008
+3        66.9077      335.841
+Function monotonically increasing, directly detecting endpoint intervals
+x = 27468.78084374001, maximum ULP = 1.3789e+05
+----------------------------------------
+Testing expression: 1.0 / tan(x + 1) - 1.0 / tan(x)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 108480.00ms
+Average execution time: 108480.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 56, Eps: 3.14198
+=====4. DBSCAN completed and successfully!=====
+no.         x          ULP
+1        1.58844      5.26646
+2        15.5652      5.32474
+3        22.4672      3.27717
+4         37.952       3.3786
+5        78.6037      3.37896
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 5.33131 * pow(1.94904, i - 1),   i >= 1
+The upper bound function is: x_i = 6.32005 * pow(1.87887, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+Above are the intervals: 
+[0.01, 0.0115281]
+[0.0131353, 0.0216598]
+[0.0256012, 0.0406958]
+[0.0498979, 0.0764621]
+[0.0972533, 0.143662]
+[0.189551, 0.269922]
+[0.369443, 0.507149]
+[0.720061, 0.952865]
+[1.40343, 1.79031]
+[2.73535, 3.36375]
+[5.33131, 6.32005]
+[10.391, 11.8745]
+[20.2525, 22.3107]
+[39.4729, 41.9189]
+[76.9345, 78.76]
+[147.98, 149.949]
+[278.034, 292.257]
+[522.39, 569.621]
+[981.502, 1110.22]
+[1844.11, 2163.86]
+[3464.84, 4217.46]
+[6509.98, 8220.02]
+[12231.4, 16021.2]
+[22981.2, 31226]
+[43178.6, 60860.8]
+[81126.9, 100000]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+x = 4095.636857776279, maximum ULP = 8.8912e+07
+----------------------------------------
+Testing expression: (1.0 - cos(x)) / sin(x)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 7760.00ms
+Average execution time: 7760.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 94.24777528, maximum ULP = 2.3113e+10
+----------------------------------------
+Testing expression: sqrt(x + 1) - sqrt(x)
+Range: [0, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 14430.00ms
+Average execution time: 14430.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 29, Eps: 2.85908
+=====4. DBSCAN completed and successfully!=====
+no.         x          ULP
+1         3.0067      7.43183
+2         7.0025      17.9442
+3        27.0213      63.9087
+Function monotonically increasing, directly detecting endpoint intervals
+x = 17859.12, maximum ULP = 65479
+----------------------------------------
+Testing expression: (x - 1) / (x * x - 1)
+Range: [1.00001, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 10920.00ms
+Average execution time: 10920.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 0.43255774, maximum ULP = 1.4982
+----------------------------------------
+Testing expression: 1.0 / (x + 1.0)
+Range: [1.00001, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 12790.00ms
+Average execution time: 12790.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 8, Eps: 0.614076
+=====4. DBSCAN completed and successfully!=====
+no.         x          ULP
+1      0.0177992      1.39321
+2         1.0013      1.49774
+3         3.0037      1.47575
+4         7.0233      1.47343
+5        15.0253      1.49049
+6        31.0029      1.49596
+7        63.0525       1.4932
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 0.659784 * pow(2.13431, i - 1),   i >= 1
+The upper bound function is: x_i = 1.00141 * pow(1.99977, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+Above are the intervals: 
+[1.00001, 1.00141]
+[1.40818, 2.00259]
+[3.00549, 4.00471]
+[6.41465, 8.00848]
+[13.6908, 16.0151]
+[29.2205, 32.0264]
+[62.3654, 64.0453]
+[128.076, 133.107]
+[256.121, 284.091]
+[512.182, 606.338]
+[1024.24, 1294.11]
+[2048.25, 2762.03]
+[4096.02, 5895.03]
+[8191.08, 12581.8]
+[16380.2, 26853.4]
+[32756.6, 57313.5]
+[65505.6, 100000]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+x = 1.000041300674151, maximum ULP = 1.4998
+----------------------------------------
+Testing expression: x / ( x + 1)
+Range: [0, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 22070.00ms
+Average execution time: 22070.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 10, Eps: 0.720957
+=====4. DBSCAN completed and successfully!=====
+no.         x          ULP
+1       0.133788      1.31334
+2         3.0139      1.24489
+3         7.0357      1.37097
+4        15.0939      1.43121
+5        31.2245      1.45662
+6        63.2003      1.48047
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 1.43939 * pow(2.12598, i - 1),   i >= 1
+The upper bound function is: x_i = 1.99162 * pow(2.00338, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+Above are the intervals: 
+[3.88741e-06, 1.47654e-05]
+[8.26457e-06, 2.95806e-05]
+[1.75703e-05, 5.92611e-05]
+[3.73542e-05, 0.000118722]
+[7.94145e-05, 0.000237845]
+[0.000168834, 0.000476494]
+[0.000358938, 0.000954596]
+[0.000763096, 0.00191241]
+[0.00162233, 0.00383129]
+[0.00344904, 0.00767551]
+[0.00733261, 0.0153769]
+[0.015589, 0.0308058]
+[0.033142, 0.0617156]
+[0.0704593, 0.123639]
+[0.149795, 0.247696]
+[0.318462, 0.496229]
+[0.677045, 0.994134]
+[1.43939, 1.99162]
+[3.06011, 3.98997]
+[6.50574, 7.99341]
+[13.8311, 16.0138]
+[29.4047, 32.0817]
+[62.5139, 64.2717]
+[128.76, 132.903]
+[257.956, 282.55]
+[516.782, 600.697]
+[1035.31, 1277.07]
+[2074.11, 2715.04]
+[4155.23, 5772.12]
+[8324.49, 12271.4]
+[16677.1, 26088.8]
+[33410.5, 55464.4]
+[66933.7, 100000]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+x = 0.0002437459306957608, maximum ULP = 1.4888
+----------------------------------------
+Testing expression: (0.954929658551372 * x) - (0.12900613773279798 * ((x * x) * x))
+Range: [0, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 4660.00ms
+Average execution time: 4660.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 2.7207289, maximum ULP = 30184
+----------------------------------------
+Testing expression: (-x * x * x) / 6.0
+Range: [0, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 16030.00ms
+Average execution time: 16030.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 22.96050472, maximum ULP = 1.9346
+----------------------------------------
+Testing expression: log(1 - x) / log(1 + x)
+Range: [0, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 9600.00ms
+Average execution time: 9600.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 0.01019998, maximum ULP = 49.231
+----------------------------------------
+Testing expression: log((1 - x) / (1 + x))
+Range: [0, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 3310.00ms
+Average execution time: 3310.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+MinPts: 0, Eps: 0
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x = 0.01079992, maximum ULP = 33.87
+----------------------------------------
+All tests completed!
+Starting automated testing...
+Warmup runs per test: 1
+Measured runs per test: 1
+=========================================
+Testing expression: (x1 * x2 - 1.0) / ((x1 * x2) * (x1 * x2) - 1.0)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 92570.00ms
+Average execution time: 92570.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function along the x1-axis
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 18.0407 * pow(2.13433, i - 1),   i >= 1
+The upper bound function is: x_i = 19.1225 * pow(2.09997, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.0114661]
+[0.0196291, 0.0240785]
+[0.0418949, 0.0505641]
+[0.0894175, 0.106183]
+[0.190846, 0.222981]
+[0.407329, 0.468253]
+[0.869374, 0.983317]
+[1.85553, 2.06494]
+[3.96031, 4.3363]
+[8.45261, 9.1061]
+[18.0407, 19.1225]
+[38.5047, 40.1567]
+[82.1817, 84.3279]
+[175.403, 177.086]
+[371.875, 374.368]
+[780.926, 799.024]
+[1639.92, 1705.38]
+[3443.78, 3639.84]
+[7231.83, 7768.62]
+[15186.6, 16580.8]
+[31891.4, 35388.9]
+[66971, 75531.5]
+Please wait, error detection is currently underway~
+Now fit the function along the x2-axis
+[1, 37.9788]
+[2, 60.8318]
+[3, 77.5476]
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 39.8375 * pow(1.39934, i - 1),   i >= 1
+The upper bound function is: x_i = 41.7657 * pow(1.38402, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.0123673]
+[0.012536, 0.0171165]
+[0.017542, 0.0236896]
+[0.0245472, 0.0327868]
+[0.0343498, 0.0453775]
+[0.048067, 0.0628033]
+[0.0672619, 0.086921]
+[0.0941221, 0.1203]
+[0.131708, 0.166498]
+[0.184305, 0.230436]
+[0.257904, 0.318928]
+[0.360895, 0.441402]
+[0.505013, 0.610908]
+[0.706684, 0.845508]
+[0.988888, 1.1702]
+[1.38379, 1.61958]
+[1.93638, 2.24152]
+[2.70965, 3.10231]
+[3.79172, 4.29365]
+[5.30589, 5.94249]
+[7.42473, 8.22452]
+[10.3897, 11.3829]
+[14.5387, 15.7541]
+[20.3445, 21.804]
+[28.4688, 30.1771]
+[39.8375, 41.7657]
+[55.746, 57.8045]
+[78.0075, 80.0025]
+[109.159, 110.725]
+[152.75, 153.245]
+[212.094, 213.748]
+[293.543, 299.106]
+[406.268, 418.55]
+[562.283, 585.693]
+[778.21, 819.581]
+[1077.06, 1146.87]
+[1490.67, 1604.86]
+[2063.11, 2245.74]
+[2855.38, 3142.54]
+[3951.9, 4397.47]
+[5469.5, 6153.55]
+[7569.89, 8610.88]
+[10476.9, 12049.5]
+[14500.2, 16861.3]
+[20068.5, 23594.7]
+[27775.2, 33016.9]
+[38441.4, 46201.8]
+[53203.6, 64651.9]
+[73634.7, 90469.7]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+The error in the x2 dimension is greater, the maximum error is: 
+x1 = 80117.18553021527, x2 = 14722.257679391, maximum ULP = 1.5169
+----------------------------------------
+Testing expression: sqrt(x1 * x1 + x2 * x2)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 61710.00ms
+Average execution time: 61710.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function along the x1-axis
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 0.99393 * pow(6.18042, i - 1),   i >= 1
+The upper bound function is: x_i = 1.988 * pow(4.47754, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.0221462]
+[0.0260208, 0.0991604]
+[0.160819, 0.443994]
+[0.99393, 1.988]
+[6.14291, 8.90134]
+[37.9657, 39.856]
+[178.457, 234.644]
+[799.047, 1450.2]
+[3577.76, 8962.84]
+[16019.5, 55394.1]
+[71728.1, 100000]
+Please wait, error detection is currently underway~
+Now fit the function along the x2-axis
+[1, 33.3445]
+[2, 62.9501]
+[3, 99.9485]
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 34.8535 * pow(1.69237, i - 1),   i >= 1
+The upper bound function is: x_i = 36.6994 * pow(1.66548, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.0104717]
+[0.0130261, 0.0174405]
+[0.022045, 0.0290468]
+[0.0373083, 0.0483769]
+[0.0631394, 0.0805709]
+[0.106855, 0.134189]
+[0.180839, 0.22349]
+[0.306046, 0.372219]
+[0.517944, 0.619924]
+[0.876553, 1.03247]
+[1.48345, 1.71956]
+[2.51055, 2.86391]
+[4.24878, 4.76978]
+[7.19051, 7.94399]
+[12.169, 13.2306]
+[20.5945, 22.0353]
+[34.8535, 36.6994]
+[58.985, 61.1222]
+[99.8245, 101.798]
+[168.94, 169.543]
+[282.37, 285.909]
+[470.283, 483.864]
+[783.248, 818.878]
+[1304.49, 1385.84]
+[2172.6, 2345.36]
+[3618.43, 3969.22]
+[6026.42, 6717.4]
+[10036.9, 11368.3]
+[16716.3, 19239.4]
+[27840.7, 32560.2]
+[46368.2, 55104]
+[77225.4, 93256.3]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+The error in the x1 dimension is greater, the maximum error is: 
+x1 = 8.166895985597456, x2 = 61884.73834054344, maximum ULP = 0.66731
+----------------------------------------
+Testing expression: x1 / (x1 + x2)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 8060.00ms
+Average execution time: 8060.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x1 = 64.26634270520245, x2 = 64.36184633755211, maximum ULP = 1.4704
+----------------------------------------
+Testing expression: cos(x1 + x2) - cos(x1)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 342450.00ms
+Average execution time: 342450.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function along the x1-axis
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 34.3678 * pow(1.17955, i - 1),   i >= 1
+The upper bound function is: x_i = 36.2664 * pow(1.17244, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.242466, 0.306715]
+[0.286001, 0.359606]
+[0.337353, 0.421618]
+[0.397925, 0.494324]
+[0.469372, 0.579567]
+[0.553649, 0.679511]
+[0.653057, 0.796689]
+[0.770314, 0.934073]
+[0.908624, 1.09515]
+[1.07177, 1.284]
+[1.26421, 1.50542]
+[1.49119, 1.76502]
+[1.75894, 2.06939]
+[2.07476, 2.42625]
+[2.44728, 2.84464]
+[2.8867, 3.33518]
+[3.405, 3.91032]
+[4.01638, 4.58463]
+[4.73752, 5.37522]
+[5.58815, 6.30215]
+[6.5915, 7.38892]
+[7.77501, 8.6631]
+[9.17102, 10.157]
+[10.8177, 11.9085]
+[12.76, 13.9621]
+[15.0511, 16.3698]
+[17.7535, 19.1927]
+[20.9412, 22.5023]
+[24.7012, 26.3827]
+[29.1363, 30.9323]
+[34.3678, 36.2664]
+[40.5385, 42.5203]
+[47.8173, 49.8527]
+[56.4029, 58.4496]
+[66.5301, 68.5289]
+[78.4756, 80.3463]
+[92.566, 94.2016]
+[109.186, 110.446]
+[128.791, 129.492]
+[151.822, 151.915]
+[178.003, 179.192]
+[208.699, 211.366]
+[244.688, 249.317]
+[286.883, 294.082]
+[336.354, 346.884]
+[394.357, 409.168]
+[462.361, 482.634]
+[542.093, 569.292]
+[635.574, 671.509]
+[745.175, 792.078]
+[873.677, 934.297]
+[1024.34, 1102.05]
+[1200.98, 1299.92]
+[1408.08, 1533.33]
+[1650.9, 1808.64]
+[1935.59, 2133.38]
+[2269.37, 2516.43]
+[2660.71, 2968.26]
+[3119.53, 3501.21]
+[3657.48, 4129.86]
+[4288.19, 4871.38]
+[5027.67, 5746.04]
+[5894.66, 6777.74]
+[6911.16, 7994.69]
+[8102.96, 9430.15]
+[9500.27, 11123.3]
+[11138.5, 13120.5]
+[13059.3, 15476.3]
+[15311.3, 18255.1]
+[17951.7, 21532.9]
+[21047.3, 25399.1]
+[24676.9, 29959.5]
+[28932.2, 35338.8]
+[33921.4, 41683.9]
+[39771, 49168.3]
+[46629.3, 57996.5]
+[54670.3, 68409.9]
+[64097.9, 80692.9]
+[75151.2, 95181.4]
+[88110.6, 100000]
+Please wait, error detection is currently underway~
+Now fit the function along the x2-axis
+[1, 26.979]
+[2, 31.4234]
+[3, 53.3591]
+[4, 70.2854]
+[5, 99.5001]
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 24.4514 * pow(1.41757, i - 1),   i >= 1
+The upper bound function is: x_i = 26.1653 * pow(1.40028, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.0113441]
+[0.0113332, 0.0158849]
+[0.0160656, 0.0222433]
+[0.0227741, 0.0311469]
+[0.0322837, 0.0436145]
+[0.0457643, 0.0610726]
+[0.0648739, 0.0855188]
+[0.091963, 0.11975]
+[0.130364, 0.167684]
+[0.184799, 0.234805]
+[0.261965, 0.328794]
+[0.371352, 0.460404]
+[0.526416, 0.644696]
+[0.74623, 0.902756]
+[1.05783, 1.26411]
+[1.49954, 1.77011]
+[2.1257, 2.47866]
+[3.01332, 3.47082]
+[4.27158, 4.86013]
+[6.05524, 6.80555]
+[8.58371, 9.52969]
+[12.168, 13.3443]
+[17.2489, 18.6857]
+[24.4514, 26.1653]
+[34.6615, 36.6388]
+[49.135, 51.3046]
+[69.6521, 71.8409]
+[98.7364, 100.598]
+[139.965, 140.865]
+[197.251, 198.41]
+[276.206, 281.259]
+[386.767, 398.703]
+[541.583, 565.188]
+[758.369, 801.192]
+[1061.93, 1135.74]
+[1487, 1609.99]
+[2082.22, 2282.26]
+[2915.7, 3235.26]
+[4082.8, 4586.19]
+[5717.07, 6501.23]
+[8005.51, 9215.92]
+[11210, 13064.2]
+[15697.1, 18519.3]
+[21980.4, 26252.4]
+[30778.8, 37214.4]
+[43098.9, 52753.9]
+[60350.7, 74782.1]
+[84507.9, 100000]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+The error in the x2 dimension is greater, the maximum error is: 
+x1 = 67122.02961911127, x2 = 0.01089137429102506, maximum ULP = 1.7e+06
+----------------------------------------
+Testing expression: tan(x1 + x2) - tan(x1)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 306020.00ms
+Average execution time: 306020.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function along the x1-axis
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 21.6136 * pow(1.48071, i - 1),   i >= 1
+The upper bound function is: x_i = 23.3471 * pow(1.45658, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.012634]
+[0.0124687, 0.0184025]
+[0.0184624, 0.0268047]
+[0.0273374, 0.0390432]
+[0.0404787, 0.0568696]
+[0.0599371, 0.0828351]
+[0.0887492, 0.120656]
+[0.131411, 0.175745]
+[0.194582, 0.255987]
+[0.288118, 0.372866]
+[0.426618, 0.54311]
+[0.631696, 0.791083]
+[0.935357, 1.15228]
+[1.38499, 1.67838]
+[2.05076, 2.4447]
+[3.03657, 3.56091]
+[4.49627, 5.18675]
+[6.65766, 7.55492]
+[9.85803, 11.0043]
+[14.5968, 16.0287]
+[21.6136, 23.3471]
+[32.0034, 34.007]
+[47.3877, 49.5339]
+[70.1672, 72.1501]
+[103.897, 105.093]
+[153.076, 153.841]
+[222.967, 227.793]
+[324.77, 337.295]
+[473.053, 499.434]
+[689.041, 739.515]
+[1003.64, 1095]
+[1461.89, 1621.38]
+[2129.36, 2400.79]
+[3101.58, 3554.86]
+[4517.7, 5263.7]
+[6580.4, 7794]
+[9584.88, 11540.6]
+[13961.2, 17088.3]
+[20335.6, 25302.7]
+[29620.4, 37465.8]
+[43144.5, 55475.9]
+[62843.4, 82143.5]
+[91536.5, 100000]
+Please wait, error detection is currently underway~
+Now fit the function along the x2-axis
+[1, 34.5977]
+[2, 49.9352]
+[3, 87.9661]
+[4, 99.9012]
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 37.923 * pow(1.40053, i - 1),   i >= 1
+The upper bound function is: x_i = 39.723 * pow(1.38775, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.0109965]
+[0.0116911, 0.0152603]
+[0.0163738, 0.0211776]
+[0.0229321, 0.0293892]
+[0.0321172, 0.0407849]
+[0.0449812, 0.0565992]
+[0.0629977, 0.0785457]
+[0.0882304, 0.109002]
+[0.12357, 0.151267]
+[0.173063, 0.209922]
+[0.242381, 0.291319]
+[0.339463, 0.404278]
+[0.475429, 0.561037]
+[0.665855, 0.77858]
+[0.932552, 1.08048]
+[1.30607, 1.49943]
+[1.8292, 2.08084]
+[2.56185, 2.88768]
+[3.58796, 4.00739]
+[5.02506, 5.56126]
+[7.03776, 7.71764]
+[9.85662, 10.7102]
+[13.8045, 14.863]
+[19.3337, 20.6262]
+[27.0775, 28.624]
+[37.923, 39.723]
+[53.1124, 55.1257]
+[74.3857, 76.5007]
+[104.18, 106.164]
+[145.907, 147.329]
+[204.348, 204.456]
+[283.734, 286.196]
+[393.753, 400.827]
+[546.431, 561.372]
+[758.31, 786.221]
+[1052.35, 1101.13]
+[1460.39, 1542.17]
+[2026.66, 2159.86]
+[2812.5, 3024.95]
+[3903.05, 4236.55]
+[5416.47, 5933.43]
+[7516.71, 8309.97]
+[10431.3, 11638.4]
+[14476.1, 16300]
+[20089.2, 22828.6]
+[27878.8, 31972.3]
+[38688.8, 44778.3]
+[53690.5, 62713.5]
+[74509, 87832.3]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+The error in the x2 dimension is greater, the maximum error is: 
+x1 = 89657.79291960881, x2 = 0.01418182100623839, maximum ULP = 2.4404e+06
+----------------------------------------
+Testing expression: ((-12.0 * x1) - (7.0 * x2)) + x2 * x2
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 211530.00ms
+Average execution time: 211530.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function along the x1-axis
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 26.925 * pow(1.20775, i - 1),   i >= 1
+The upper bound function is: x_i = 28.8799 * pow(1.19774, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.0935052, 0.128736]
+[0.112931, 0.154192]
+[0.136392, 0.184682]
+[0.164728, 0.221202]
+[0.198951, 0.264943]
+[0.240283, 0.317333]
+[0.290202, 0.380083]
+[0.350491, 0.455241]
+[0.423306, 0.545261]
+[0.511248, 0.653082]
+[0.61746, 0.782224]
+[0.745738, 0.936902]
+[0.900666, 1.12217]
+[1.08778, 1.34407]
+[1.31377, 1.60984]
+[1.5867, 1.92818]
+[1.91634, 2.30946]
+[2.31446, 2.76614]
+[2.79529, 3.31312]
+[3.37602, 3.96826]
+[4.07739, 4.75295]
+[4.92447, 5.69281]
+[5.94753, 6.81851]
+[7.18314, 8.16682]
+[8.67544, 9.78174]
+[10.4778, 11.716]
+[12.6545, 14.0327]
+[15.2835, 16.8076]
+[18.4587, 20.1312]
+[22.2935, 24.1119]
+[26.925, 28.8799]
+[32.5187, 34.5906]
+[39.2745, 41.4306]
+[47.4337, 49.6232]
+[57.2881, 59.4358]
+[69.1898, 71.1887]
+[83.564, 85.2657]
+[100.925, 102.126]
+[121.892, 122.321]
+[146.509, 147.215]
+[175.48, 177.799]
+[210.18, 214.737]
+[251.741, 259.348]
+[301.521, 313.228]
+[361.144, 378.301]
+[432.557, 456.894]
+[518.092, 551.814]
+[620.54, 666.454]
+[743.247, 804.91]
+[890.218, 972.131]
+[1066.25, 1174.09]
+[1277.09, 1418.01]
+[1529.63, 1712.6]
+[1832.1, 2068.4]
+[2194.38, 2498.11]
+[2628.3, 3017.09]
+[3148.03, 3643.89]
+[3770.52, 4400.92]
+[4516.12, 5315.21]
+[5409.14, 6419.45]
+[6478.75, 7753.1]
+[7759.87, 9363.81]
+[9294.32, 11309.1]
+[11132.2, 13658.6]
+[13333.5, 16496.2]
+[15970.1, 19923.3]
+[19128, 24062.4]
+[22910.5, 29061.4]
+[27440.8, 35098.9]
+[32867, 42390.7]
+[39366.2, 51197.5]
+[47150.5, 61833.8]
+[56474.2, 74679.8]
+[67641.5, 90194.6]
+[81017, 100000]
+[97037.5, 100000]
+Please wait, error detection is currently underway~
+Now fit the function along the x2-axis
+[1, 24.4755]
+[2, 25.8464]
+[3, 27.2813]
+[4, 27.4746]
+[5, 28.9763]
+[6, 29.954]
+[7, 39.1562]
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 22.3096 * pow(1.07505, i - 1),   i >= 1
+The upper bound function is: x_i = 24.3033 * pow(1.06963, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[2.54478, 3.22616]
+[2.73576, 3.45079]
+[2.94107, 3.69106]
+[3.1618, 3.94806]
+[3.39908, 4.22295]
+[3.65418, 4.51699]
+[3.92842, 4.83149]
+[4.22324, 5.1679]
+[4.54019, 5.52773]
+[4.88092, 5.91261]
+[5.24723, 6.32429]
+[5.64103, 6.76464]
+[6.06438, 7.23565]
+[6.5195, 7.73945]
+[7.00878, 8.27833]
+[7.53477, 8.85473]
+[8.10025, 9.47127]
+[8.70816, 10.1307]
+[9.36169, 10.8361]
+[10.0643, 11.5906]
+[10.8196, 12.3976]
+[11.6316, 13.2609]
+[12.5045, 14.1842]
+[13.4429, 15.1718]
+[14.4518, 16.2282]
+[15.5364, 17.3581]
+[16.7024, 18.5667]
+[17.9559, 19.8595]
+[19.3034, 21.2422]
+[20.7521, 22.7213]
+[22.3096, 24.3033]
+[23.9838, 25.9955]
+[25.7838, 27.8055]
+[27.7188, 29.7415]
+[29.7991, 31.8124]
+[32.0355, 34.0274]
+[34.4397, 36.3967]
+[37.0243, 38.9309]
+[39.8029, 41.6416]
+[42.7901, 44.541]
+[46.0014, 47.6423]
+[49.4538, 50.9595]
+[53.1652, 54.5077]
+[57.1551, 58.3029]
+[61.4446, 62.3624]
+[66.0559, 66.7046]
+[71.0133, 71.3491]
+[76.3169, 76.3427]
+[81.6307, 82.0721]
+[87.3145, 88.2315]
+[93.394, 94.8531]
+[99.8968, 101.972]
+[106.852, 109.625]
+[114.292, 117.852]
+[122.25, 126.696]
+[130.762, 136.205]
+[139.867, 146.427]
+[149.606, 157.416]
+[160.022, 169.229]
+[171.164, 181.93]
+[183.082, 195.583]
+[195.83, 210.262]
+[209.465, 226.041]
+[224.049, 243.006]
+[239.649, 261.243]
+[256.336, 280.849]
+[274.184, 301.926]
+[293.275, 324.585]
+[313.695, 348.944]
+[335.536, 375.132]
+[358.899, 403.285]
+[383.888, 433.551]
+[410.618, 466.089]
+[439.208, 501.068]
+[469.789, 538.672]
+[502.5, 579.099]
+[537.488, 622.559]
+[574.912, 669.281]
+[614.942, 719.51]
+[657.759, 773.508]
+[703.557, 831.558]
+[752.544, 893.966]
+[804.942, 961.056]
+[860.988, 1033.18]
+[920.937, 1110.72]
+[985.06, 1194.08]
+[1053.65, 1283.69]
+[1127.01, 1380.03]
+[1205.48, 1483.6]
+[1289.42, 1594.94]
+[1379.2, 1714.64]
+[1475.23, 1843.32]
+[1577.94, 1981.66]
+[1687.81, 2130.38]
+[1805.33, 2290.26]
+[1931.03, 2462.14]
+[2065.48, 2646.92]
+[2209.3, 2845.57]
+[2363.13, 3059.13]
+[2527.67, 3288.71]
+[2703.66, 3535.52]
+[2891.91, 3800.86]
+[3093.27, 4086.11]
+[3308.65, 4392.76]
+[3539.02, 4722.43]
+[3785.44, 5076.84]
+[4049.01, 5457.85]
+[4330.93, 5867.46]
+[4632.48, 6307.8]
+[4955.03, 6781.19]
+[5300.04, 7290.11]
+[5669.07, 7837.22]
+[6063.8, 8425.39]
+[6486.01, 9057.7]
+[6937.61, 9737.47]
+[7420.66, 10468.3]
+[7937.35, 11253.9]
+[8490.01, 12098.5]
+[9081.15, 13006.4]
+[9713.45, 13982.5]
+[10389.8, 15031.9]
+[11113.2, 16160]
+[11887, 17372.8]
+[12714.6, 18676.6]
+[13599.9, 20078.3]
+[14546.9, 21585.1]
+[15559.7, 23205.1]
+[16643.1, 24946.6]
+[17801.9, 26818.8]
+[19041.5, 28831.5]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+The error in the x2 dimension is greater, the maximum error is: 
+x1 = 43162.61371080745, x2 = 756.9774832722532, maximum ULP = 4.2879
+----------------------------------------
+Testing expression: (x1 * x1 + x2 - 11.0) * (x1 * x1 + x2 - 11.0) + (x1 + x2 * x2 - 7.0) * (x1 + x2 * x2 - 7.0)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 213400.00ms
+Average execution time: 213400.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function along the x1-axis
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 5.16928 * pow(1.23915, i - 1),   i >= 1
+The upper bound function is: x_i = 7.14113 * pow(1.17983, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.0500304]
+[0.0102989, 0.0590272]
+[0.0127619, 0.0696418]
+[0.0158139, 0.0821651]
+[0.0195959, 0.0969405]
+[0.0242824, 0.114373]
+[0.0300896, 0.13494]
+[0.0372857, 0.159206]
+[0.0462028, 0.187835]
+[0.0572524, 0.221612]
+[0.0709445, 0.261464]
+[0.0879113, 0.308482]
+[0.108936, 0.363955]
+[0.134988, 0.429403]
+[0.167271, 0.506621]
+[0.207275, 0.597724]
+[0.256846, 0.70521]
+[0.318272, 0.832024]
+[0.394388, 0.981644]
+[0.488707, 1.15817]
+[0.605584, 1.36644]
+[0.750412, 1.61216]
+[0.929877, 1.90206]
+[1.15226, 2.2441]
+[1.42783, 2.64765]
+[1.7693, 3.12376]
+[2.19244, 3.6855]
+[2.71677, 4.34824]
+[3.3665, 5.13017]
+[4.17162, 6.0527]
+[5.16928, 7.14113]
+[6.40554, 8.42529]
+[7.93745, 9.94037]
+[9.83573, 11.7279]
+[12.188, 13.8369]
+[15.1028, 16.3251]
+[18.7147, 19.2608]
+[22.7243, 23.1904]
+[26.8107, 28.7365]
+[31.632, 35.609]
+[37.3202, 44.1251]
+[44.0314, 54.6778]
+[51.9493, 67.7542]
+[61.2911, 83.958]
+[72.3128, 104.037]
+[85.3165, 128.918]
+[100.659, 159.749]
+[118.76, 197.954]
+[140.116, 245.296]
+[165.312, 303.959]
+[195.039, 376.653]
+[230.112, 466.731]
+[271.492, 578.352]
+[320.313, 716.667]
+[377.914, 888.062]
+[445.873, 1100.45]
+[526.052, 1363.62]
+[620.649, 1689.74]
+[732.258, 2093.85]
+[863.936, 2594.6]
+[1019.29, 3215.11]
+[1202.59, 3984.02]
+[1418.85, 4936.82]
+[1673.99, 6117.49]
+[1975.02, 7580.51]
+[2330.17, 9393.43]
+[2749.2, 11639.9]
+[3243.57, 14423.6]
+[3826.85, 17873.1]
+[4515.02, 22147.6]
+[5326.93, 27444.3]
+[6284.85, 34007.7]
+[7415.02, 42140.8]
+[8748.43, 52219]
+[10321.6, 64707.4]
+[12177.7, 80182.5]
+[14367.6, 99358.5]
+[16951.2, 100000]
+[19999.5, 100000]
+[23595.9, 100000]
+[27839.1, 100000]
+[32845.2, 100000]
+[38751.6, 100000]
+[45720.2, 100000]
+[53941.8, 100000]
+[63641.9, 100000]
+[75086.4, 100000]
+[88588.8, 100000]
+Please wait, error detection is currently underway~
+Now fit the function along the x2-axis
+[1, 37.0306]
+[2, 57.8627]
+[3, 86.418]
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 36.6564 * pow(1.5289, i - 1),   i >= 1
+The upper bound function is: x_i = 38.5708 * pow(1.50751, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.0104966]
+[0.0115066, 0.0158237]
+[0.0175924, 0.0238544]
+[0.026897, 0.0359608]
+[0.0411229, 0.0542112]
+[0.0628728, 0.0817241]
+[0.0961262, 0.1232]
+[0.146967, 0.185725]
+[0.224699, 0.279983]
+[0.343542, 0.422078]
+[0.525241, 0.636287]
+[0.803041, 0.95921]
+[1.22777, 1.44602]
+[1.87714, 2.17989]
+[2.86996, 3.28621]
+[4.38788, 4.954]
+[6.70863, 7.46821]
+[10.2568, 11.2584]
+[15.6817, 16.9722]
+[23.9757, 25.5858]
+[36.6564, 38.5708]
+[56.044, 58.146]
+[85.6857, 87.6557]
+[131.005, 132.142]
+[199.206, 200.293]
+[300.305, 306.229]
+[452.713, 468.193]
+[682.47, 715.821]
+[1028.83, 1094.42]
+[1550.97, 1673.26]
+[2338.11, 2558.24]
+[3524.73, 3911.3]
+[5313.57, 5979.98]
+[8010.27, 9142.8]
+[12075.6, 13978.4]
+[18204.1, 21371.6]
+[27442.8, 32675.1]
+[41370.4, 49956.9]
+[62366.3, 76379.2]
+[94017.9, 100000]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+The error in the x1 dimension is greater, the maximum error is: 
+x1 = 10.63114258715451, x2 = 34875.17029062252, maximum ULP = 1.6271
+----------------------------------------
+Testing expression: atan(x2 / x1) * (180.0 / 3.14159265359)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 250860.00ms
+Average execution time: 250860.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function along the x1-axis
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 44.4625 * pow(1.47261, i - 1),   i >= 1
+The upper bound function is: x_i = 46.433 * pow(1.45547, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.012044]
+[0.0131257, 0.0175296]
+[0.0193292, 0.0255138]
+[0.0284644, 0.0371345]
+[0.0419171, 0.054048]
+[0.0617277, 0.0786652]
+[0.0909011, 0.114495]
+[0.133862, 0.166643]
+[0.197127, 0.242544]
+[0.290293, 0.353015]
+[0.427489, 0.513801]
+[0.629527, 0.747821]
+[0.92705, 1.08843]
+[1.36519, 1.58417]
+[2.01039, 2.30572]
+[2.96054, 3.35589]
+[4.35973, 4.8844]
+[6.4202, 7.10908]
+[9.45448, 10.347]
+[13.9228, 15.0598]
+[20.5029, 21.919]
+[30.1929, 31.9024]
+[44.4625, 46.433]
+[65.4761, 67.5817]
+[96.421, 98.363]
+[141.991, 143.164]
+[208.371, 209.098]
+[303.277, 307.921]
+[441.41, 453.448]
+[642.458, 667.755]
+[935.076, 983.345]
+[1360.97, 1448.09]
+[1980.85, 2132.48]
+[2883.07, 3140.31]
+[4196.21, 4624.47]
+[6107.45, 6810.06]
+[8889.2, 10028.6]
+[12937.9, 14768.3]
+[18830.8, 21747.9]
+[27407.6, 32026.3]
+[39890.8, 47162.4]
+[58059.8, 69452.1]
+[84504.2, 100000]
+Please wait, error detection is currently underway~
+Now fit the function along the x2-axis
+[1, 30.4426]
+[2, 62.0333]
+[3, 99.8462]
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 32.7679 * pow(1.74638, i - 1),   i >= 1
+The upper bound function is: x_i = 34.5866 * pow(1.71657, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.010447]
+[0.0133511, 0.017933]
+[0.0233161, 0.0307832]
+[0.0407187, 0.0528415]
+[0.0711102, 0.090706]
+[0.124185, 0.155703]
+[0.216874, 0.267275]
+[0.378744, 0.458795]
+[0.661429, 0.787554]
+[1.1551, 1.35189]
+[2.01725, 2.32061]
+[3.52287, 3.98349]
+[6.15226, 6.83792]
+[10.7442, 11.7378]
+[18.7634, 20.1487]
+[32.7679, 34.5866]
+[57.2251, 59.3702]
+[99.9365, 101.913]
+[174.527, 174.941]
+[300.297, 304.789]
+[515.481, 532.277]
+[884.858, 929.556]
+[1518.92, 1623.36]
+[2607.33, 2834.99]
+[4475.66, 4950.96]
+[7682.77, 8646.24]
+[13188, 15099.6]
+[22638.1, 26369.6]
+[38859.8, 46051.2]
+[66705.6, 80422.7]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+The error in the x1 dimension is greater, the maximum error is: 
+x1 = 4235.116329882957, x2 = 28807.46811502091, maximum ULP = 0.96093
+----------------------------------------
+Testing expression: sin(x1 + x2) - sin(x1)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 449950.00ms
+Average execution time: 449950.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function along the x1-axis
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 10.8119 * pow(1.24995, i - 1),   i >= 1
+The upper bound function is: x_i = 11.9506 * pow(1.23972, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.0133994, 0.0189509]
+[0.0167486, 0.023494]
+[0.020935, 0.029126]
+[0.0261678, 0.0361083]
+[0.0327085, 0.0447643]
+[0.0408841, 0.0554955]
+[0.0511032, 0.0687991]
+[0.0638766, 0.085292]
+[0.0798428, 0.105739]
+[0.0997998, 0.131087]
+[0.124745, 0.162512]
+[0.155926, 0.20147]
+[0.1949, 0.249767]
+[0.243616, 0.309642]
+[0.304508, 0.383871]
+[0.380621, 0.475895]
+[0.475759, 0.589979]
+[0.594677, 0.731412]
+[0.743318, 0.906749]
+[0.929113, 1.12412]
+[1.16135, 1.3936]
+[1.45163, 1.72768]
+[1.81447, 2.14185]
+[2.26801, 2.6553]
+[2.8349, 3.29184]
+[3.5435, 4.08098]
+[4.42921, 5.05929]
+[5.5363, 6.27213]
+[6.92012, 7.77572]
+[8.64983, 9.63976]
+[10.8119, 11.9506]
+[13.5144, 14.8155]
+[16.8923, 18.3672]
+[21.1146, 22.7702]
+[26.3923, 28.2288]
+[32.9891, 34.996]
+[41.2349, 43.3854]
+[51.5417, 53.786]
+[64.4247, 66.6798]
+[80.5279, 82.6646]
+[100.656, 102.481]
+[125.816, 127.049]
+[157.264, 157.505]
+[195.263, 196.572]
+[242.073, 245.706]
+[300.104, 307.121]
+[372.046, 383.887]
+[461.235, 479.841]
+[571.805, 599.779]
+[708.881, 749.696]
+[878.817, 937.086]
+[1089.49, 1171.31]
+[1350.67, 1464.09]
+[1674.46, 1830.04]
+[2075.87, 2287.47]
+[2573.51, 2859.23]
+[3190.44, 3573.9]
+[3955.27, 4467.21]
+[4903.44, 5583.81]
+[6078.92, 6979.5]
+[7536.19, 8724.05]
+[9342.81, 10904.7]
+[11582.5, 13630.3]
+[14359.1, 17037.3]
+[17801.4, 21295.8]
+[22068.8, 26618.8]
+[27359.2, 33272.2]
+[33917.9, 41588.7]
+[42048.9, 51984]
+[52129.1, 64977.5]
+[64625.7, 81218.9]
+[80118.1, 100000]
+[99324.5, 100000]
+Please wait, error detection is currently underway~
+Now fit the function along the x2-axis
+[1, 18.8658]
+[2, 25.1159]
+[3, 31.0297]
+[4, 43.9814]
+[5, 50.2678]
+[6, 69.1142]
+[7, 75.4743]
+[8, 84.4427]
+[9, 94.2481]
+[10, 95.5861]
+[11, 99.7191]
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 29.1336 * pow(1.14326, i - 1),   i >= 1
+The upper bound function is: x_i = 30.7564 * pow(1.13904, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.524857, 0.619048]
+[0.600048, 0.705123]
+[0.686011, 0.803165]
+[0.784289, 0.914841]
+[0.896646, 1.04204]
+[1.0251, 1.18693]
+[1.17196, 1.35197]
+[1.33985, 1.53995]
+[1.5318, 1.75407]
+[1.75124, 1.99796]
+[2.00213, 2.27577]
+[2.28895, 2.5922]
+[2.61687, 2.95263]
+[2.99176, 3.36317]
+[3.42037, 3.8308]
+[3.91037, 4.36345]
+[4.47057, 4.97016]
+[5.11102, 5.66123]
+[5.84323, 6.44839]
+[6.68033, 7.345]
+[7.63736, 8.36627]
+[8.73149, 9.52955]
+[9.98237, 10.8546]
+[11.4124, 12.3638]
+[13.0474, 14.083]
+[14.9166, 16.0411]
+[17.0535, 18.2715]
+[19.4966, 20.8121]
+[22.2897, 23.7058]
+[25.4829, 27.002]
+[29.1336, 30.7564]
+[33.3073, 35.0329]
+[38.079, 39.904]
+[43.5342, 45.4524]
+[49.7709, 51.7723]
+[56.9011, 58.9709]
+[65.0527, 67.1705]
+[74.3722, 76.5101]
+[85.0268, 87.1484]
+[97.2078, 99.2658]
+[111.134, 113.068]
+[127.055, 128.789]
+[145.257, 146.697]
+[166.066, 167.094]
+[189.857, 190.328]
+[216.791, 217.056]
+[246.935, 248.152]
+[281.27, 283.702]
+[320.378, 324.345]
+[364.925, 370.811]
+[415.665, 423.933]
+[473.461, 484.666]
+[539.293, 554.099]
+[614.278, 633.48]
+[699.69, 724.232]
+[796.977, 827.986]
+[907.792, 946.604]
+[1034.01, 1082.21]
+[1177.79, 1237.25]
+[1341.55, 1414.5]
+[1528.09, 1617.14]
+[1740.56, 1848.82]
+[1982.57, 2113.68]
+[2258.23, 2416.49]
+[2572.23, 2762.67]
+[2929.88, 3158.45]
+[3337.26, 3610.93]
+[3801.29, 4128.24]
+[4329.83, 4719.65]
+[4931.87, 5395.79]
+[5617.61, 6168.79]
+[6398.71, 7052.54]
+[7288.41, 8062.88]
+[8301.81, 9217.98]
+[9456.13, 10538.5]
+[10770.9, 12048.3]
+[12268.6, 13774.3]
+[13974.4, 15747.7]
+[15917.5, 18003.7]
+[18130.7, 20582.9]
+[20651.7, 23531.6]
+[23523.2, 26902.7]
+[26793.9, 30756.8]
+[30519.5, 35163.1]
+[34763, 40200.6]
+[39596.6, 45959.7]
+[45102.2, 52543.9]
+[51373.4, 60071.4]
+[58516.6, 68677.2]
+[66652.9, 78515.9]
+[75920.6, 89764.1]
+[86476.9, 100000]
+[98501, 100000]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+The error in the x2 dimension is greater, the maximum error is: 
+x1 = 79643.52902544793, x2 = 3970.980656273216, maximum ULP = 2.4646e+06
+----------------------------------------
+Testing expression: sqrt(x1 + x2 * x2)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 90350.00ms
+Average execution time: 90350.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function along the x1-axis
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 30.1387 * pow(1.32046, i - 1),   i >= 1
+The upper bound function is: x_i = 31.8564 * pow(1.30935, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.0128406]
+[0.0125555, 0.0168128]
+[0.0165791, 0.0220139]
+[0.021892, 0.0288239]
+[0.0289074, 0.0377405]
+[0.038171, 0.0494155]
+[0.0504032, 0.0647022]
+[0.0665553, 0.0847178]
+[0.0878835, 0.110925]
+[0.116047, 0.14524]
+[0.153235, 0.19017]
+[0.20234, 0.248999]
+[0.267181, 0.326026]
+[0.352802, 0.426882]
+[0.46586, 0.558938]
+[0.615148, 0.731845]
+[0.812277, 0.958241]
+[1.07258, 1.25467]
+[1.41629, 1.6428]
+[1.87016, 2.151]
+[2.46946, 2.81642]
+[3.26082, 3.68767]
+[4.30578, 4.82845]
+[5.6856, 6.32213]
+[7.5076, 8.27788]
+[9.91347, 10.8386]
+[13.0903, 14.1916]
+[17.2852, 18.5817]
+[22.8244, 24.33]
+[30.1387, 31.8564]
+[39.7969, 41.7112]
+[52.5501, 54.6145]
+[69.3902, 71.5095]
+[91.6268, 93.6309]
+[120.989, 122.596]
+[159.761, 160.521]
+[210.177, 210.958]
+[275.196, 278.562]
+[360.327, 367.829]
+[471.794, 485.703]
+[617.744, 641.35]
+[808.843, 846.876]
+[1059.06, 1118.26]
+[1386.68, 1476.62]
+[1815.64, 1949.81]
+[2377.31, 2574.65]
+[3112.73, 3399.72]
+[4075.65, 4489.18]
+[5336.46, 5927.78]
+[6987.29, 7827.38]
+[9148.8, 10335.7]
+[11979, 13647.9]
+[15684.7, 18021.5]
+[20536.7, 23796.6]
+[26889.7, 31422.4]
+[35208.1, 41492]
+[46099.6, 54788.4]
+[60360.5, 72345.8]
+[79033, 95529.6]
+Please wait, error detection is currently underway~
+Now fit the function along the x2-axis
+[1, 11.5207]
+[2, 26.9777]
+[3, 54.4364]
+[4, 58.4983]
+[5, 99.9912]
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 17.5598 * pow(1.53821, i - 1),   i >= 1
+The upper bound function is: x_i = 19.0918 * pow(1.51345, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.0110002]
+[0.0116214, 0.0166483]
+[0.0178761, 0.0251964]
+[0.0274972, 0.0381336]
+[0.0422965, 0.0577135]
+[0.0650608, 0.0873467]
+[0.100077, 0.132195]
+[0.15394, 0.200071]
+[0.236791, 0.302799]
+[0.364235, 0.458272]
+[0.560269, 0.693574]
+[0.861811, 1.04969]
+[1.32565, 1.58866]
+[2.03912, 2.40437]
+[3.1366, 3.6389]
+[4.82474, 5.50731]
+[7.42146, 8.33505]
+[11.4158, 12.6147]
+[17.5598, 19.0918]
+[27.0107, 28.8946]
+[41.5481, 43.7306]
+[63.9097, 66.1843]
+[98.3064, 100.167]
+[151.216, 151.598]
+[229.437, 232.602]
+[347.242, 357.79]
+[525.534, 550.356]
+[795.372, 846.562]
+[1203.76, 1302.19]
+[1821.83, 2003.04]
+[2757.26, 3081.1]
+[4172.99, 4739.37]
+[6315.63, 7290.14]
+[9558.42, 11213.8]
+[14466.2, 17249.1]
+[21894, 26532.8]
+[33135.5, 40812.9]
+[50149.1, 62778.8]
+[75898.4, 96567]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+The error in the x1 dimension is greater, the maximum error is: 
+x1 = 625.5578798766842, x2 = 54111.91098788054, maximum ULP = 0.69872
+----------------------------------------
+Testing expression: sin(x1 * x2)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 13220.00ms
+Average execution time: 13220.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x1 = 94.14487201676465, x2 = 83.02398576350603, maximum ULP = 6.7124e+07
+----------------------------------------
+Testing expression: (x1 + x2) / (x1 - x2)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 132870.00ms
+Average execution time: 132870.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function along the x1-axis
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 18.3538 * pow(1.75296, i - 1),   i >= 1
+The upper bound function is: x_i = 19.9613 * pow(1.71523, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.0104632]
+[0.012436, 0.0179468]
+[0.0217998, 0.0307829]
+[0.0382142, 0.0527999]
+[0.0669881, 0.0905642]
+[0.117428, 0.155339]
+[0.205846, 0.266442]
+[0.360841, 0.457011]
+[0.632541, 0.78388]
+[1.10882, 1.34454]
+[1.94372, 2.3062]
+[3.40728, 3.95567]
+[5.97283, 6.78489]
+[10.4702, 11.6377]
+[18.3538, 19.9613]
+[32.1735, 34.2384]
+[56.399, 58.7268]
+[98.8654, 100.73]
+[172.776, 173.307]
+[296.351, 303.801]
+[508.311, 532.553]
+[871.872, 933.545]
+[1495.46, 1636.47]
+[2565.07, 2868.67]
+[4399.69, 5028.68]
+[7546.5, 8815.09]
+[12944, 15452.5]
+[22202, 27087.7]
+[38081.6, 47483.8]
+[65318.9, 83237.3]
+Please wait, error detection is currently underway~
+Now fit the function along the x2-axis
+[1, 25.1675]
+[2, 33.1694]
+[3, 61.1926]
+[4, 99.9756]
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 21.2836 * pow(1.66893, i - 1),   i >= 1
+The upper bound function is: x_i = 22.9709 * pow(1.63718, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.0141165]
+[0.0163643, 0.0231112]
+[0.0273109, 0.0378373]
+[0.0455801, 0.0619465]
+[0.0760702, 0.101418]
+[0.126956, 0.166039]
+[0.211881, 0.271836]
+[0.353616, 0.445045]
+[0.590162, 0.728619]
+[0.984942, 1.19288]
+[1.6438, 1.95296]
+[2.7434, 3.19735]
+[4.57855, 5.23465]
+[7.64131, 8.57007]
+[12.7528, 14.0308]
+[21.2836, 22.9709]
+[35.521, 37.6075]
+[59.2822, 61.5703]
+[98.9382, 100.802]
+[165.031, 165.121]
+[270.185, 275.577]
+[442.343, 459.919]
+[724.195, 767.575]
+[1185.64, 1281.03]
+[1941.11, 2137.96]
+[3177.94, 3568.11]
+[5202.87, 5954.94]
+[8518.04, 9938.41]
+[13945.6, 16586.6]
+[22831.4, 27681.9]
+[37379.2, 46199.2]
+[61196.5, 77103.5]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+The error in the x2 dimension is greater, the maximum error is: 
+x1 = 34415.872776183, x2 = 14910.56680755918, maximum ULP = 1.1626
+----------------------------------------
+Testing expression: x1 * cos(x2 * (3.14159265359 / 180.0))
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 288500.00ms
+Average execution time: 288500.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function along the x1-axis
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 17.6666 * pow(2.01658, i - 1),   i >= 1
+The upper bound function is: x_i = 19.2137 * pow(1.96153, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.0116164]
+[0.0158851, 0.0227859]
+[0.0320337, 0.0446952]
+[0.0645987, 0.0876708]
+[0.130269, 0.171969]
+[0.262698, 0.337322]
+[0.529752, 0.661666]
+[1.06829, 1.29788]
+[2.15429, 2.54582]
+[4.34431, 4.9937]
+[8.76066, 9.79528]
+[17.6666, 19.2137]
+[35.6262, 37.6882]
+[71.8432, 73.9265]
+[144.878, 145.009]
+[284.439, 292.158]
+[557.935, 589.161]
+[1094.41, 1188.09]
+[2146.71, 2395.89]
+[4210.82, 4831.51]
+[8259.65, 9743.14]
+[16201.5, 19647.9]
+[31779.8, 39621.5]
+[62336.9, 79900.2]
+Please wait, error detection is currently underway~
+Now fit the function along the x2-axis
+[1, 90.6505]
+[2, 91.0647]
+[3, 91.5081]
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 89.646 * pow(1.00477, i - 1),   i >= 1
+The upper bound function is: x_i = 91.6459 * pow(1.00467, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[77.7148, 79.6954]
+[78.0856, 80.0675]
+[78.4583, 80.4412]
+[78.8327, 80.8168]
+[79.2089, 81.194]
+[79.5869, 81.5731]
+[79.9667, 81.9539]
+[80.3483, 82.3364]
+[80.7317, 82.7208]
+[81.117, 83.107]
+[81.5041, 83.4949]
+[81.893, 83.8847]
+[82.2838, 84.2763]
+[82.6765, 84.6697]
+[83.071, 85.065]
+[83.4674, 85.4621]
+[83.8658, 85.861]
+[84.266, 86.2618]
+[84.6681, 86.6645]
+[85.0721, 87.0691]
+[85.4781, 87.4755]
+[85.886, 87.8839]
+[86.2959, 88.2942]
+[86.7077, 88.7063]
+[87.1215, 89.1204]
+[87.5372, 89.5365]
+[87.955, 89.9544]
+[88.3747, 90.3744]
+[88.7964, 90.7963]
+[89.2202, 91.2201]
+[89.646, 91.6459]
+[90.0738, 92.0738]
+[90.5036, 92.5036]
+[90.9355, 92.9354]
+[91.3694, 93.3693]
+[91.8055, 93.8051]
+[92.2436, 94.243]
+[92.6838, 94.683]
+[93.1261, 95.125]
+[93.5705, 95.569]
+[94.017, 96.0152]
+[94.4657, 96.4634]
+[94.9165, 96.9137]
+[95.3694, 97.3661]
+[95.8245, 97.8206]
+[96.2818, 98.2773]
+[96.7413, 98.7361]
+[97.2029, 99.197]
+[97.6668, 99.6601]
+[98.1329, 100.125]
+[98.6012, 100.593]
+[99.0717, 101.062]
+[99.5445, 101.534]
+[100.02, 102.008]
+[100.497, 102.484]
+[100.976, 102.963]
+[101.458, 103.443]
+[101.942, 103.926]
+[102.429, 104.411]
+[102.918, 104.899]
+[103.409, 105.388]
+[103.902, 105.88]
+[104.398, 106.375]
+[104.896, 106.871]
+[105.397, 107.37]
+[105.9, 107.871]
+[106.405, 108.375]
+[106.913, 108.881]
+[107.423, 109.389]
+[107.936, 109.9]
+[108.451, 110.413]
+[108.969, 110.928]
+[109.489, 111.446]
+[110.011, 111.966]
+[110.536, 112.489]
+[111.064, 113.014]
+[111.594, 113.542]
+[112.126, 114.072]
+[112.661, 114.604]
+[113.199, 115.139]
+[113.739, 115.677]
+[114.282, 116.217]
+[114.827, 116.759]
+[115.375, 117.304]
+[115.926, 117.852]
+[116.479, 118.402]
+[117.035, 118.955]
+[117.593, 119.51]
+[118.154, 120.068]
+[118.718, 120.629]
+[119.285, 121.192]
+[119.854, 121.757]
+[120.426, 122.326]
+[121.001, 122.897]
+[121.578, 123.471]
+[122.158, 124.047]
+[122.741, 124.626]
+[123.327, 125.208]
+[123.916, 125.792]
+[124.507, 126.38]
+[125.101, 126.97]
+[125.698, 127.562]
+[126.298, 128.158]
+[126.901, 128.756]
+[127.506, 129.357]
+[128.115, 129.961]
+[128.726, 130.568]
+[129.34, 131.177]
+[129.958, 131.789]
+[130.578, 132.405]
+[131.201, 133.023]
+[131.827, 133.644]
+[132.456, 134.268]
+[133.088, 134.894]
+[133.723, 135.524]
+[134.361, 136.157]
+[135.003, 136.792]
+[135.647, 137.431]
+[136.294, 138.073]
+[136.945, 138.717]
+[137.598, 139.365]
+[138.255, 140.015]
+[138.914, 140.669]
+[139.577, 141.326]
+[140.243, 141.985]
+[140.913, 142.648]
+[141.585, 143.314]
+[142.261, 143.983]
+[142.94, 144.655]
+[143.622, 145.33]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+The error in the x1 dimension is greater, the maximum error is: 
+x1 = 2.510952512658908, x2 = 82352.57224743684, maximum ULP = 26016
+----------------------------------------
+Testing expression: x1 * sin(x2 * (3.14159265359 / 180.0))
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 287240.00ms
+Average execution time: 287240.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function along the x1-axis
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 18.8926 * pow(1.37748, i - 1),   i >= 1
+The upper bound function is: x_i = 20.4747 * pow(1.36082, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.0125897]
+[0.0119482, 0.0171323]
+[0.0164585, 0.023314]
+[0.0226712, 0.031726]
+[0.0312293, 0.0431734]
+[0.0430178, 0.0587511]
+[0.0592563, 0.0799496]
+[0.0816247, 0.108797]
+[0.112437, 0.148053]
+[0.15488, 0.201473]
+[0.213344, 0.274168]
+[0.293878, 0.373092]
+[0.404812, 0.507711]
+[0.557622, 0.690902]
+[0.768116, 0.940192]
+[1.05807, 1.27943]
+[1.45747, 1.74107]
+[2.00764, 2.36928]
+[2.76549, 3.22416]
+[3.80942, 4.3875]
+[5.24742, 5.97058]
+[7.22823, 8.12488]
+[9.95677, 11.0565]
+[13.7153, 15.0459]
+[18.8926, 20.4747]
+[26.0242, 27.8623]
+[35.848, 37.9155]
+[49.38, 51.5961]
+[68.0201, 70.2129]
+[93.6966, 95.547]
+[129.066, 130.022]
+[176.936, 177.786]
+[240.778, 244.897]
+[327.655, 337.341]
+[445.879, 464.682]
+[606.761, 640.092]
+[825.691, 881.717]
+[1123.62, 1214.55]
+[1529.04, 1673.02]
+[2080.74, 2304.56]
+[2831.51, 3174.5]
+[3853.17, 4372.82]
+[5243.46, 6023.49]
+[7135.39, 8297.26]
+[9709.97, 11429.3]
+[13213.5, 15743.7]
+[17981.2, 21686.7]
+[24469.1, 29873.1]
+[33298, 41149.7]
+[45312.5, 56683.1]
+[61662.1, 78080]
+[83910.9, 100000]
+Please wait, error detection is currently underway~
+Now fit the function along the x2-axis
+[1, 22.3516]
+[2, 23.3346]
+[3, 23.5059]
+[4, 43.0022]
+[5, 43.0444]
+[6, 45.1199]
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 20.5291 * pow(1.18164, i - 1),   i >= 1
+The upper bound function is: x_i = 22.4023 * pow(1.17065, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.13735, 0.198387]
+[0.162298, 0.232241]
+[0.191778, 0.271872]
+[0.226612, 0.318266]
+[0.267774, 0.372578]
+[0.316412, 0.436157]
+[0.373884, 0.510586]
+[0.441796, 0.597716]
+[0.522043, 0.699714]
+[0.616867, 0.819119]
+[0.728913, 0.958899]
+[0.861312, 1.12253]
+[1.01776, 1.31409]
+[1.20262, 1.53833]
+[1.42107, 1.80085]
+[1.67919, 2.10816]
+[1.98419, 2.46791]
+[2.3446, 2.88905]
+[2.77047, 3.38206]
+[3.27369, 3.95919]
+[3.86832, 4.63482]
+[4.57096, 5.42574]
+[5.40122, 6.35162]
+[6.38229, 7.43551]
+[7.54156, 8.70436]
+[8.9114, 10.1897]
+[10.5301, 11.9286]
+[12.4427, 13.9642]
+[14.7028, 16.3471]
+[17.3734, 19.1367]
+[20.5291, 22.4023]
+[24.2579, 26.2252]
+[28.6641, 30.7004]
+[33.8706, 35.9394]
+[40.0228, 42.0723]
+[47.2925, 49.2518]
+[55.8827, 57.6565]
+[66.0331, 67.4954]
+[78.0273, 79.0133]
+[92.2, 92.4967]
+[108.281, 108.947]
+[126.759, 128.736]
+[148.39, 152.12]
+[173.712, 179.75]
+[203.356, 212.4]
+[238.058, 250.98]
+[278.682, 296.568]
+[326.238, 350.436]
+[381.909, 414.088]
+[447.081, 489.303]
+[523.374, 578.179]
+[612.686, 683.199]
+[717.24, 807.294]
+[839.634, 953.93]
+[982.916, 1127.2]
+[1150.65, 1331.94]
+[1347, 1573.88]
+[1576.86, 1859.75]
+[1845.95, 2197.55]
+[2160.96, 2596.72]
+[2529.72, 3068.38]
+[2961.41, 3625.71]
+[3466.76, 4284.28]
+[4058.36, 5062.48]
+[4750.9, 5982.02]
+[5561.63, 7068.58]
+[6510.71, 8352.51]
+[7621.74, 9869.65]
+[8922.37, 11662.4]
+[10444.9, 13780.7]
+[12227.3, 16283.8]
+[14313.9, 19241.6]
+[16756.5, 22736.6]
+[19616, 26866.4]
+[22963.4, 31746.4]
+[26882, 37512.8]
+[31469.4, 44326.5]
+[36839.5, 52377.9]
+[43126.1, 61891.8]
+[50485.4, 73133.7]
+[59100.6, 86417.6]
+[69185.9, 100000]
+[80992.3, 100000]
+[94813.4, 100000]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+The error in the x1 dimension is greater, the maximum error is: 
+x1 = 25881.11183492044, x2 = 65879.01194268191, maximum ULP = 24285
+----------------------------------------
+Testing expression: pow((x1 + 1.0), (1.0 / x2)) - pow(x1, (1.0 / x2))
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 20650.00ms
+Average execution time: 20650.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x1 = 92.05170620505312, x2 = 99.6661883277568, maximum ULP = 16009
+----------------------------------------
+Testing expression: 0.5 * sqrt((2.0 * (sqrt(x1 * x1 + x2 * x2) + x1)))
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 49820.00ms
+Average execution time: 49820.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function along the x1-axis
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 0.0007803 * pow(162.164, i - 1),   i >= 1
+The upper bound function is: x_i = 0.267334 * pow(9.17442, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.029139]
+[0.01, 0.267334]
+[0.126537, 2.45263]
+[20.5198, 22.5015]
+[206.438, 3327.58]
+[1893.95, 100000]
+[17375.9, 100000]
+Please wait, error detection is currently underway~
+Now fit the function along the x2-axis
+[1, 28.5307]
+[2, 51.0774]
+[3, 99.9214]
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 26.5087 * pow(1.92907, i - 1),   i >= 1
+The upper bound function is: x_i = 28.3159 * pow(1.88468, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.01, 0.0140984]
+[0.019256, 0.026571]
+[0.0371461, 0.0500779]
+[0.0716574, 0.094381]
+[0.138232, 0.177878]
+[0.266659, 0.335244]
+[0.514403, 0.63183]
+[0.992317, 1.1908]
+[1.91425, 2.24428]
+[3.69271, 4.22976]
+[7.12349, 7.97175]
+[13.7417, 15.0242]
+[26.5087, 28.3159]
+[51.137, 53.3665]
+[98.6468, 100.579]
+[189.56, 190.296]
+[357.26, 367.094]
+[673.322, 708.15]
+[1269, 1366.07]
+[2391.66, 2635.24]
+[4507.52, 5083.56]
+[8495.25, 9806.52]
+[16010.9, 18917.4]
+[30175.4, 36493]
+[56871.1, 70397.5]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+The error in the x1 dimension is greater, the maximum error is: 
+x1 = 21.21523782877572, x2 = 87815.24985305531, maximum ULP = 0.80841
+----------------------------------------
+Testing expression: (0.5 * sin(x1)) * (exp(-x2) - exp(x2))
+Range: [0.01, 708]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 15270.00ms
+Average execution time: 15270.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x1 = 9.415854305050267, x2 = 0.01330497985393972, maximum ULP = 37.496
+----------------------------------------
+Testing expression: x1 + (((((((((2.0 * x1) * (((((3.0 * x1) * x1) + (2.0 * x2)) - x1) / ((x1 * x1) + 1.0))) * ((((((3.0 * x1) * x1) + (2.0 * x2)) - x1) / ((x1 * x1) + 1.0)) - 3.0)) + ((x1 * x1) * ((4.0 * (((((3.0 * x1) * x1) + (2.0 * x2)) - x1) / ((x1 * x1) + 1.0))) - 6.0))) * ((x1 * x1) + 1.0)) + (((3.0 * x1) * x1) * (((((3.0 * x1) * x1) + (2.0 * x2)) - x1) / ((x1 * x1) + 1.0)))) + ((x1 * x1) * x1)) + x1) + (3.0 * (((((3.0 * x1) * x1) - (2.0 * x2)) - x1) / ((x1 * x1) + 1.0))))
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 683460.00ms
+Average execution time: 683460.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function along the x1-axis
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 18.2041 * pow(1.20785, i - 1),   i >= 1
+The upper bound function is: x_i = 19.5597 * pow(1.20084, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.0630579, 0.0806886]
+[0.0761647, 0.0968941]
+[0.0919959, 0.116354]
+[0.111118, 0.139723]
+[0.134214, 0.167785]
+[0.162111, 0.201482]
+[0.195806, 0.241948]
+[0.236505, 0.290541]
+[0.285663, 0.348893]
+[0.345039, 0.418965]
+[0.416757, 0.503109]
+[0.503381, 0.604154]
+[0.608011, 0.725492]
+[0.734388, 0.871199]
+[0.887033, 1.04617]
+[1.07141, 1.25628]
+[1.2941, 1.50859]
+[1.56309, 1.81158]
+[1.88798, 2.17542]
+[2.2804, 2.61233]
+[2.75439, 3.13699]
+[3.3269, 3.76702]
+[4.01841, 4.52358]
+[4.85365, 5.4321]
+[5.8625, 6.52308]
+[7.08104, 7.83317]
+[8.55286, 9.40639]
+[10.3306, 11.2956]
+[12.4779, 13.5642]
+[15.0714, 16.2884]
+[18.2041, 19.5597]
+[21.9878, 23.4881]
+[26.5581, 28.2054]
+[32.0783, 33.8702]
+[38.7459, 40.6727]
+[46.7994, 48.8414]
+[56.5268, 58.6507]
+[68.2761, 70.4301]
+[82.4675, 84.5752]
+[99.6086, 101.561]
+[120.313, 121.959]
+[145.32, 146.453]
+[175.525, 175.867]
+[211.188, 212.009]
+[253.602, 256.076]
+[304.536, 309.302]
+[365.699, 373.592]
+[439.145, 451.244]
+[527.343, 545.037]
+[633.255, 658.324]
+[760.437, 795.159]
+[913.163, 960.436]
+[1096.56, 1160.07]
+[1316.8, 1401.19]
+[1581.26, 1692.43]
+[1898.84, 2044.21]
+[2280.2, 2469.11]
+[2738.16, 2982.32]
+[3288.09, 3602.21]
+[3948.47, 4350.94]
+[4741.48, 5255.3]
+[5693.76, 6347.63]
+[6837.29, 7667]
+[8210.49, 9260.62]
+[9859.48, 11185.5]
+[11839.7, 13510.4]
+[14217.5, 16318.6]
+[17073, 19710.5]
+[20501.9, 23807.4]
+[24619.5, 28755.8]
+[29564.1, 34732.8]
+[35501.7, 41952.2]
+[42631.8, 50672.1]
+[51194, 61204.4]
+[61475.8, 73926]
+[73822.6, 89291.8]
+[88649.1, 100000]
+Please wait, error detection is currently underway~
+Now fit the function along the x2-axis
+[1, 17.6299]
+[2, 27.9905]
+[3, 39.2056]
+[4, 51.4356]
+[5, 53.7876]
+[6, 70.9828]
+[7, 72.4448]
+[8, 80.8959]
+[9, 90.1261]
+[10, 98.2953]
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 29.3606 * pow(1.15021, i - 1),   i >= 1
+The upper bound function is: x_i = 31.0455 * pow(1.14544, i - 1),   i >= 1
+=====6. Prediction interval completed!=====
+[0.44097, 0.528293]
+[0.50721, 0.605126]
+[0.583399, 0.693133]
+[0.671034, 0.793939]
+[0.771832, 0.909407]
+[0.887772, 1.04167]
+[1.02113, 1.19316]
+[1.17452, 1.36669]
+[1.35094, 1.56546]
+[1.55387, 1.79313]
+[1.78729, 2.05392]
+[2.05576, 2.35263]
+[2.36456, 2.69479]
+[2.71975, 3.08671]
+[3.1283, 3.53562]
+[3.59821, 4.04983]
+[4.13871, 4.63882]
+[4.7604, 5.31347]
+[5.47548, 6.08624]
+[6.29797, 6.9714]
+[7.24401, 7.98529]
+[8.33216, 9.14664]
+[9.58377, 10.4769]
+[11.0234, 12.0006]
+[12.6792, 13.7459]
+[14.5838, 15.7451]
+[16.7745, 18.035]
+[19.2943, 20.6579]
+[22.1926, 23.6623]
+[25.5262, 27.1037]
+[29.3606, 31.0455]
+[33.7709, 35.5606]
+[38.8438, 40.7324]
+[44.6786, 46.6564]
+[51.39, 53.4419]
+[59.1095, 61.2142]
+[67.9885, 70.117]
+[78.2013, 80.3145]
+[89.9482, 91.9951]
+[103.46, 105.375]
+[119.001, 120.7]
+[136.876, 138.254]
+[157.437, 158.361]
+[181.086, 181.392]
+[207.773, 208.288]
+[237.991, 239.575]
+[272.603, 275.563]
+[312.25, 316.956]
+[357.662, 364.567]
+[409.679, 419.33]
+[469.261, 482.319]
+[537.508, 554.77]
+[615.681, 638.104]
+[705.223, 733.956]
+[807.788, 844.207]
+[925.27, 971.018]
+[1059.84, 1116.88]
+[1213.98, 1284.65]
+[1390.53, 1477.62]
+[1592.76, 1699.58]
+[1824.41, 1954.88]
+[2089.74, 2248.53]
+[2393.67, 2586.29]
+[2741.79, 2974.78]
+[3140.55, 3421.64]
+[3597.3, 3935.61]
+[4120.47, 4526.8]
+[4719.74, 5206.78]
+[5406.16, 5988.91]
+[6192.4, 6888.53]
+[7093, 7923.28]
+[8124.58, 9113.46]
+[9306.18, 10482.4]
+[10659.6, 12057]
+[12209.9, 13868.2]
+[13985.7, 15951.4]
+[16019.7, 18347.5]
+[18349.6, 21103.5]
+[21018.2, 24273.5]
+[24075, 27919.8]
+[27576.4, 32113.7]
+[31587, 36937.6]
+[36180.9, 42486.1]
+[41442.9, 48868.1]
+[47470.2, 56208.8]
+[54374.1, 64652.1]
+[62282, 74363.7]
+[71340.1, 85534.2]
+[81715.5, 98382.6]
+[93599.8, 100000]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+The error in the x2 dimension is greater, the maximum error is: 
+x1 = 10453.10513139901, x2 = 358.6336881655912, maximum ULP = 4.3811
+----------------------------------------
+Testing expression: (((333.75 * pow(b, 6.0)) + (pow(a, 2.0) * (((((11.0 * pow(a, 2.0)) * pow(b, 2.0)) - pow(b, 6.0)) - (121.0 * pow(b, 4.0))) - 2.0))) + (5.5 * pow(b, 8.0))) + (a / (2.0 * b))
+Range: [0.01, 100]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 3980.00ms
+Average execution time: 3980.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+Detection interval is less than R, directly return the maximum error
+x1 = 82.4278380967946, x2 = 35.1448928267904, maximum ULP = 2.4179e+05
+----------------------------------------
+All tests completed!
+Starting automated testing...
+Warmup runs per test: 1
+Measured runs per test: 1
+=========================================
+Testing expression: (-(331.4 + (0.6 * x3)) * x2) / (((331.4 + (0.6 * x3)) + x1) * ((331.4 + (0.6 * x3)) + x1))
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 113350.00ms
+Average execution time: 113350.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 21.4606 * pow(1.24247, i - 1),   i >= 1
+The upper bound function is: x_i = 23.1805 * pow(1.23141, i - 1),   i >= 1
+=====6. PredictInterval interval completed!=====
+[0.0318446, 0.0449848]
+[0.0395661, 0.0553946]
+[0.0491598, 0.0682134]
+[0.0610797, 0.0839985]
+[0.0758898, 0.103436]
+[0.094291, 0.127372]
+[0.117154, 0.156847]
+[0.145561, 0.193143]
+[0.180855, 0.237838]
+[0.224708, 0.292875]
+[0.279193, 0.360649]
+[0.34689, 0.444106]
+[0.431001, 0.546875]
+[0.535507, 0.673427]
+[0.665353, 0.829263]
+[0.826683, 1.02116]
+[1.02713, 1.25747]
+[1.27618, 1.54845]
+[1.58562, 1.90678]
+[1.97009, 2.34802]
+[2.44779, 2.89137]
+[3.04131, 3.56046]
+[3.77874, 4.38437]
+[4.69498, 5.39895]
+[5.83339, 6.64831]
+[7.24782, 8.18678]
+[9.00522, 10.0813]
+[11.1887, 12.4142]
+[13.9017, 15.2869]
+[17.2725, 18.8244]
+[21.4606, 23.1805]
+[26.6642, 28.5446]
+[33.1296, 35.1501]
+[41.1626, 43.2841]
+[51.1434, 53.3004]
+[63.5442, 65.6345]
+[78.952, 80.8228]
+[98.0957, 99.5259]
+[121.881, 122.557]
+[150.918, 151.434]
+[185.841, 188.153]
+[228.846, 233.775]
+[281.803, 290.459]
+[347.014, 360.887]
+[427.316, 448.392]
+[526.201, 557.115]
+[647.967, 692.2]
+[797.912, 860.039]
+[982.555, 1068.58]
+[1209.93, 1327.68]
+[1489.91, 1649.6]
+[1834.69, 2049.58]
+[2259.25, 2546.55]
+[2782.06, 3164.02]
+[3425.85, 3931.21]
+[4218.62, 4884.42]
+[5194.84, 6068.76]
+[6396.97, 7540.27]
+[7877.28, 9368.58]
+[9700.14, 11640.2]
+[11944.8, 14462.6]
+[14709, 17969.4]
+[18112.7, 22326.5]
+[22304.1, 27740.1]
+[27465.5, 34466.3]
+[33821.2, 42823.5]
+[41647.7, 53207]
+[51285.3, 66108.2]
+[63153.2, 82137.7]
+[77767.3, 100000]
+[95763.2, 100000]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+x1 = 46716.05180498173, x2 = 78972.26279352089, x3 = 70815.46971488104, maximum ULP = 2.3867
+----------------------------------------
+Testing expression: (((x0 + x1) - x2) + ((x1 + x2) - x0)) + ((x2 + x0) - x1)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 42840.00ms
+Average execution time: 42840.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 11.7266 * pow(2.6084, i - 1),   i >= 1
+The upper bound function is: x_i = 13.2502 * pow(2.48362, i - 1),   i >= 1
+=====6. PredictInterval interval completed!=====
+[0.014274, 0.0227314]
+[0.0372325, 0.0564562]
+[0.0971173, 0.140216]
+[0.253321, 0.348243]
+[0.660764, 0.864903]
+[1.72354, 2.14809]
+[4.49569, 5.33504]
+[11.7266, 13.2502]
+[30.5876, 32.9085]
+[79.7849, 81.7324]
+[202.992, 208.111]
+[504.156, 542.839]
+[1252.13, 1415.94]
+[3109.82, 3693.35]
+[7723.61, 9633.75]
+[19182.5, 25128.7]
+[47642.1, 65545.9]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+x1 = 0.04584706402304211, x2 = 39663.51528504223, x3 = 35094.28066829814, maximum ULP = 1.0453
+----------------------------------------
+Testing expression: ((-(x1 * x2) - ((2.0 * x2) * x3)) - x1) - x3
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 13510.00ms
+Average execution time: 13510.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x1 = 88.4504489059143, x2 = 67.28476170163358, x3 = 99.99991935553025, maximum ULP = 0.0041231
+----------------------------------------
+Testing expression: ((((((2.0 * x1) * x2) * x3) + ((3.0 * x3) * x3)) - (((x2 * x1) * x2) * x3)) + ((3.0 * x3) * x3)) - x2
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 123330.00ms
+Average execution time: 123330.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 26.9154 * pow(1.30077, i - 1),   i >= 1
+The upper bound function is: x_i = 28.2896 * pow(1.29327, i - 1),   i >= 1
+=====6. PredictInterval interval completed!=====
+[0.0100915, 0.0126157]
+[0.0131267, 0.0163155]
+[0.0170749, 0.0211005]
+[0.0222105, 0.0272887]
+[0.0288909, 0.0352917]
+[0.0375805, 0.0456419]
+[0.0488837, 0.0590274]
+[0.0635866, 0.0763387]
+[0.0827117, 0.0987268]
+[0.107589, 0.127681]
+[0.139949, 0.165126]
+[0.182042, 0.213553]
+[0.236795, 0.276183]
+[0.308017, 0.35718]
+[0.40066, 0.461932]
+[0.521168, 0.597405]
+[0.677922, 0.772608]
+[0.881822, 0.999194]
+[1.14705, 1.29223]
+[1.49205, 1.67121]
+[1.94082, 2.16133]
+[2.52457, 2.79519]
+[3.28389, 3.61495]
+[4.2716, 4.67512]
+[5.55638, 6.04622]
+[7.22759, 7.81941]
+[9.40146, 10.1126]
+[12.2292, 13.0784]
+[15.9074, 16.914]
+[20.6919, 21.8744]
+[26.9154, 28.2896]
+[35.0109, 36.5862]
+[45.5412, 47.316]
+[59.2388, 61.1925]
+[77.0563, 79.1387]
+[100.233, 102.348]
+[130.38, 132.364]
+[169.595, 171.183]
+[220.604, 221.387]
+[286.313, 286.956]
+[370.282, 373.265]
+[478.876, 485.533]
+[619.317, 631.569]
+[800.947, 821.528]
+[1035.84, 1068.62]
+[1339.63, 1390.03]
+[1732.51, 1808.12]
+[2240.61, 2351.95]
+[2897.72, 3059.36]
+[3747.55, 3979.53]
+[4846.6, 5176.46]
+[6267.99, 6733.41]
+[8106.23, 8758.63]
+[10483.6, 11393]
+[13558.1, 14819.7]
+[17534.4, 19277.1]
+[22676.8, 25075.1]
+[29327.3, 32617]
+[37928.2, 42427.3]
+[49051.5, 55188.4]
+[63437, 71787.5]
+[82041.5, 93379.3]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+x1 = 0.1229889437380914, x2 = 2286.844368106371, x3 = 44604.38817773137, maximum ULP = 2.0627
+----------------------------------------
+Testing expression: ((3.0 + (2.0 / (x3 * x3))) - (((0.125 * (3.0 - (2.0 * x1))) * (((x2 * x2) * x3) * x3)) / (1.0 - x1))) - 4.5
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 19910.00ms
+Average execution time: 19910.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x1 = 88.4504489059143, x2 = 67.28476170163358, x3 = 99.99991935553025, maximum ULP = 0.3363
+----------------------------------------
+Testing expression: ((6.0 * x1) - (((0.5 * x1) * (((x2 * x2) * x3) * x3)) / (1.0 - x1))) - 2.5
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 16530.00ms
+Average execution time: 16530.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN clusters less than 3, return R's maximum error!=====
+x1 = 88.4504489059143, x2 = 67.28476170163358, x3 = 99.99991935553025, maximum ULP = 0.76512
+----------------------------------------
+Testing expression: ((3.0 - (2.0 / (x3 * x3))) - (((0.125 * (1.0 + (2.0 * x1))) * (((x2 * x2) * x3) * x3)) / (1.0 - x1))) - 0.5
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 58280.00ms
+Average execution time: 58280.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 26.9906 * pow(1.89374, i - 1),   i >= 1
+The upper bound function is: x_i = 28.6019 * pow(1.85925, i - 1),   i >= 1
+=====6. PredictInterval interval completed!=====
+[0.0126871, 0.0167627]
+[0.0240261, 0.031166]
+[0.0454992, 0.0579454]
+[0.0861638, 0.107735]
+[0.163172, 0.200306]
+[0.309006, 0.372419]
+[0.585177, 0.69242]
+[1.10817, 1.28738]
+[2.0986, 2.39356]
+[3.9742, 4.45022]
+[7.52611, 8.27407]
+[14.2525, 15.3836]
+[26.9906, 28.6019]
+[51.1132, 53.178]
+[96.7953, 98.8711]
+[183.305, 183.826]
+[341.778, 347.133]
+[635.451, 657.38]
+[1181.46, 1244.91]
+[2196.63, 2357.54]
+[4084.08, 4464.56]
+[7593.33, 8454.73]
+[14117.9, 16011.1]
+[26248.7, 30320.9]
+[48802.8, 57419.9]
+[90736.6, 100000]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+x1 = 2.347978589773878, x2 = 75992.68054195018, x3 = 27200.14153088083, maximum ULP = 2.2057
+----------------------------------------
+Testing expression: (((x0 + x1) - x2) + ((x1 + x2) - x0)) + ((x2 + x0) - x1)
+Range: [0.01, 100000]
+Flags: --EIFFEL
+Performing 1 warmup runs...
+. Done!
+Performing 1 measured runs...
+Run 1: 41780.00ms
+Average execution time: 41780.000ms
+Standard deviation: 0ms
+----------------------------------------
+Last run output:
+make: `bin/mpfrCodeGene.exe' is up to date.
+------------------------------------------------------------
+| step1: generate high-precision version code successfully |
+------------------------------------------------------------
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/zzy/Documents/work/maxfpeed/build
+[ 10%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/errordetect.cpp.o
+[ 20%] Building CXX object detectModule/CMakeFiles/detectModule.dir/EIFFEL/src/getMultiResult.cpp.o
+[ 30%] Linking CXX static library libdetectModule.a
+[ 80%] Built target detectModule
+[ 90%] Linking CXX executable ErrorDetection
+[100%] Built target ErrorDetection
+-----------------------------------------
+| step2: detect FP errors                |
+| now you choose EIFFEL method to detect |
+-----------------------------------------
+=====1. Data set construction completed!=====
+=====2. Boundary extraction completed!=====
+=====3. Automatic determination of MinPts and Eps parameters completed!=====
+=====4. DBSCAN completed and successfully!=====
+Now fit the function
+=====5. Curve function completed!=====
+The lower bound function is: x_i = 11.7266 * pow(2.6084, i - 1),   i >= 1
+The upper bound function is: x_i = 13.2502 * pow(2.48362, i - 1),   i >= 1
+=====6. PredictInterval interval completed!=====
+[0.014274, 0.0227314]
+[0.0372325, 0.0564562]
+[0.0971173, 0.140216]
+[0.253321, 0.348243]
+[0.660764, 0.864903]
+[1.72354, 2.14809]
+[4.49569, 5.33504]
+[11.7266, 13.2502]
+[30.5876, 32.9085]
+[79.7849, 81.7324]
+[202.992, 208.111]
+[504.156, 542.839]
+[1252.13, 1415.94]
+[3109.82, 3693.35]
+[7723.61, 9633.75]
+[19182.5, 25128.7]
+[47642.1, 65545.9]
+Please wait, error detection is currently underway~
+=====7. Error detection completed!=====
+x1 = 0.04584706402304211, x2 = 39663.51528504223, x3 = 35094.28066829814, maximum ULP = 1.0453
+----------------------------------------
+All tests completed!

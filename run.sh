@@ -9,7 +9,7 @@ echo "------------------------------------------------------------"
 echo "| step1: generate high-precision version code successfully |"
 echo "------------------------------------------------------------"
 cmake -B build
-cmake --build build -j `nproc`
+cmake --build build
 
 ./build/ErrorDetection $2 $3 "${4}"
 
